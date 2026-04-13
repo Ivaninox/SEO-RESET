@@ -1,430 +1,135 @@
-<antArtifact identifier="seo-part1" type="application/vnd.ant.code" language="html" title="Plan SEO Re-Set.Club — PARTIE 1/2">
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plan SEO — Re-Set.Club</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f1117;color:#c9cdd5;line-height:1.6}
-.ctn{max-width:1100px;margin:0 auto;padding:20px}
-header{text-align:center;padding:40px 20px 30px;border-bottom:1px solid #2a2d3a;margin-bottom:30px}
-header h1{color:#f0f2f5;font-size:28px}
-header p{color:#8b90a0;font-size:14px}
-nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px;justify-content:center}
-nav button{background:#1a1d27;border:1px solid #2a2d3a;color:#8b90a0;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:13px;transition:.2s}
-nav button:hover{border-color:#fbbf24;color:#f0f2f5}
-nav button.on{background:#fbbf24;color:#000;border-color:#fbbf24;font-weight:700}
-.sec{display:none}.sec.on{display:block}
-.st{color:#f0f2f5;font-size:22px;font-weight:700;margin-bottom:20px}
-.c{background:#1a1d27;border:1px solid #2a2d3a;border-radius:10px;padding:20px;margin-bottom:16px}
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-@media(max-width:700px){.g2{grid-template-columns:1fr}}
-.b{display:inline-block;font-size:11px;padding:2px 8px;border-radius:4px;font-weight:600}
-.br{background:#7f1d1d;color:#fca5a5}.bo{background:#7c2d12;color:#fdba74}.by{background:#713f12;color:#fde047}.bg{background:#14532d;color:#86efac}.bb{background:#1e3a5f;color:#93c5fd}.bp{background:#3b0764;color:#d8b4fe}.bpk{background:#831843;color:#f9a8d4}.bgr{background:#374151;color:#d1d5db}.bi{background:#312e81;color:#a5b4fc}.bc{background:#164e63;color:#67e8f9}
-ul.l{list-style:none}ul.l li{padding:6px 0;font-size:14px;display:flex;gap:8px}ul.l li::before{content:"•";color:#fbbf24;font-weight:bold;flex-shrink:0}
-.sb{background:#12141c;border:1px solid #2a2d3a;border-radius:8px;padding:16px;text-align:center}
-.sb .n{font-size:32px;font-weight:800;color:#4ade80}.sb .lb{font-size:12px;color:#8b90a0;margin-top:4px}
-table{width:100%;border-collapse:collapse;font-size:13px}
-th{text-align:left;padding:10px 8px;color:#8b90a0;border-bottom:1px solid #2a2d3a;font-weight:600}
-td{padding:10px 8px;border-bottom:1px solid #1e2030}
-code{font-family:'SF Mono','Fira Code',monospace;font-size:12px;color:#fbbf24}
-pre{background:#12141c;border:1px solid #2a2d3a;border-radius:8px;padding:16px;overflow-x:auto;font-size:12px;color:#4ade80;line-height:1.5;margin:10px 0;white-space:pre-wrap}
-.tr{display:flex;gap:10px;align-items:flex-start;background:#12141c;border:1px solid #2a2d3a;border-radius:6px;padding:10px 12px;margin-bottom:6px}
-.tr .tx{flex:1;font-size:13px}.tr .tg{display:flex;gap:4px;flex-shrink:0}
-.wl{display:inline-block;font-size:12px;padding:2px 10px;border-radius:4px;font-weight:700;margin-bottom:12px}
-.rc{background:#12141c;border:1px solid #2a2d3a;border-radius:8px;padding:14px;margin-bottom:8px}
-.rc .a{font-weight:700;font-size:14px}.rc .h{color:#f0f2f5;font-size:13px;margin-top:4px}.rc .d{color:#8b90a0;font-size:12px;margin-top:4px}
-.co{border-radius:8px;padding:14px;margin-bottom:16px;font-size:13px}
-.coy{background:rgba(251,191,36,.1);border:1px solid #92400e;color:#fde68a}
-.cog{background:rgba(74,222,128,.1);border:1px solid #14532d;color:#86efac}
-.lr{background:#12141c;border:1px solid #2a2d3a;border-radius:8px;padding:12px;margin-bottom:8px}
-.lr .lf{color:#fbbf24;font-weight:700;font-size:13px}
-.lr .lt{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
-.lr .ln{color:#8b90a0;font-size:12px;margin-top:6px;font-style:italic}
-.an{border-radius:10px;padding:14px;text-align:center;border:2px solid}
-.an .nm{color:#f0f2f5;font-weight:700;font-size:14px}.an .ur{font-size:11px;color:#8b90a0;font-family:monospace}.an .tp{font-size:11px;color:#8b90a0;margin-top:4px}
-.dl{border-radius:8px;padding:16px;margin-top:20px}.dl h4{font-weight:700;margin-bottom:8px}.dl li{font-size:13px;padding:3px 0}
-.dlr{background:rgba(239,68,68,.1);border:1px solid #7f1d1d}.dlr h4{color:#f87171}
-.dlo{background:rgba(249,115,22,.1);border:1px solid #7c2d12}.dlo h4{color:#fb923c}
-.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-@media(max-width:700px){.sg{grid-template-columns:repeat(2,1fr)}}
-.si{background:#12141c;border:1px solid #2a2d3a;border-radius:8px;padding:16px;text-align:center}
-.si .v{font-size:24px;font-weight:800;color:#fbbf24}.si .sl{font-size:12px;color:#8b90a0;margin-top:4px}
-.sh{padding:14px 20px;margin:-20px -20px 16px;border-radius:9px 9px 0 0;border-bottom:1px solid #2a2d3a}
-footer{text-align:center;padding:30px;color:#8b90a0;font-size:12px;border-top:1px solid #2a2d3a;margin-top:40px}
-</style>
-</head>
-<body>
-<header>
-<h1>🧊 Plan SEO — Re-Set.Club</h1>
-<p>Stratégie SEO complète • Adapté Webflow • Juin 2025</p>
-</header>
-<div class="ctn">
-<nav id="nav">
-<button class="on" data-t="audit">🔍 Audit</button>
-<button data-t="sem">🎯 Sémantique</button>
-<button data-t="pages">📄 Pages</button>
-<button data-t="arbo">🌳 Arborescence</button>
-<button data-t="tech">⚙️ Technique</button>
-<button data-t="tpl">📐 Templates</button>
-<button data-t="road">🗺️ Roadmap</button>
-</nav>
-
-<!-- AUDIT -->
-<div class="sec on" id="audit">
-<h2 class="st">🔍 Audit Rapide</h2>
-<div class="c" style="border-left:3px solid #fbbf24">
-<h3 style="color:#fbbf24">📍 Positionnement actuel</h3>
-<p style="font-size:14px">Site Webflow vitrine ultra-visuel avec très peu de contenu textuel indexable. Visibilité organique quasi nulle. <strong style="color:#f0f2f5">Aucune page ne cible les mots-clés business du secteur.</strong></p>
-<div class="g2" style="margin-top:16px">
-<div class="sb"><div class="n">80</div><div class="lb">PageSpeed Mobile ✓</div></div>
-<div class="sb"><div class="n">85</div><div class="lb">PageSpeed Desktop ✓</div></div>
-</div>
-</div>
-<div class="g2">
-<div class="c" style="border-color:#14532d">
-<h3 style="color:#4ade80">✅ Forces</h3>
-<ul class="l">
-<li>Offre différenciante : sauna + bain froid + breathwork en un seul lieu</li>
-<li>Branding fort, design premium cohérent</li>
-<li>Webflow = bon socle technique, HTML propre</li>
-<li>Performances correctes (80/85 PageSpeed)</li>
-<li>Marché en pleine explosion à Paris</li>
-</ul>
-</div>
-<div class="c" style="border-color:#7f1d1d">
-<h3 style="color:#f87171">❌ Faiblesses</h3>
-<ul class="l">
-<li><span class="b br">critique</span> Aucune page par service</li>
-<li><span class="b br">critique</span> Très peu de texte indexable — site 95% visuel</li>
-<li><span class="b br">critique</span> Title, Meta, H1 non optimisés</li>
-<li><span class="b br">critique</span> Pas de gestion cookies (RGPD)</li>
-<li><span class="b bo">fort</span> Aucun blog ni CMS Collection utilisé</li>
-<li><span class="b bo">fort</span> Pas d'Open Graph configuré</li>
-<li><span class="b bo">fort</span> Profil de backlinks quasi inexistant</li>
-<li><span class="b bo">fort</span> Pas de page Tarifs</li>
-</ul>
-</div>
-</div>
+<div class="tl-week">
+  <div class="tl-label">Semaine 2</div>
+  <div class="tl-task">
+    <p><span class="tag red">Critique</span></p>
+    <p><strong>Axeptio (RGPD) :</strong> Créer projet → intégrer script → conditionner GA4 et Pixel Meta au consentement → créer page /politique-cookies</p>
+  </div>
+  <div class="tl-task">
+    <p><span class="tag red">Critique</span></p>
+    <p><strong>Google Search Console :</strong> Vérifier propriété → soumettre sitemap.xml → demander indexation des pages existantes</p>
+  </div>
+  <div class="tl-task">
+    <p><span class="tag orange">Fort</span></p>
+    <p><strong>Core Web Vitals :</strong> Images en WebP (&lt;200Ko), lazy loading, limiter polices. Vérifier /homepage-en → ajouter hreflang ou supprimer.</p>
+  </div>
 </div>
 
-<!-- SEMANTIQUE -->
-<div class="sec" id="sem">
-<h2 class="st">🎯 Analyse Sémantique</h2>
-<div class="c" style="overflow-x:auto">
-<h3 style="color:#fbbf24">Mots-clés prioritaires</h3>
-<table>
-<thead><tr><th>Mot-clé</th><th>Vol/mois</th><th>Intention</th><th>Page Webflow</th><th>Priorité</th></tr></thead>
-<tbody>
-<tr><td style="color:#f0f2f5;font-weight:600">sauna paris</td><td>6 600</td><td><span class="b bg">Transac.</span></td><td><code>/sauna-paris</code></td><td>🔴 Max</td></tr>
-<tr><td style="color:#f0f2f5;font-weight:600">bain froid paris</td><td>1 900</td><td><span class="b bg">Transac.</span></td><td><code>/bain-froid-paris</code></td><td>🔴 Max</td></tr>
-<tr><td style="color:#f0f2f5;font-weight:600">sauna privatif paris</td><td>2 400</td><td><span class="b bg">Transac.</span></td><td><code>/sauna-paris</code></td><td>🔴 Max</td></tr>
-<tr><td style="color:#f0f2f5;font-weight:600">breathwork paris</td><td>880</td><td><span class="b bg">Transac.</span></td><td><code>/breathwork-paris</code></td><td>🟠 Haute</td></tr>
-<tr><td style="color:#f0f2f5;font-weight:600">spa nordique paris</td><td>1 300</td><td><span class="b bg">Transac.</span></td><td><code>/sauna-paris</code></td><td>🟠 Haute</td></tr>
-<tr><td style="color:#f0f2f5;font-weight:600">bain glacé paris</td><td>720</td><td><span class="b bg">Transac.</span></td><td><code>/bain-froid-paris</code></td><td>🟠 Haute</td></tr>
-<tr><td style="color:#f0f2f5;font-weight:600">tarif sauna paris</td><td>590</td><td><span class="b bg">Transac.</span></td><td><code>/tarifs</code></td><td>🟠 Haute</td></tr>
-<tr><td style="color:#f0f2f5;font-weight:600">bienfaits bain froid</td><td>3 600</td><td><span class="b bb">Info.</span></td><td><code>/blog/bienfaits-bain-froid</code></td><td>🟡 Moy</td></tr>
-<tr><td style="color:#f0f2f5;font-weight:600">bienfaits sauna</td><td>5 400</td><td><span class="b bb">Info.</span></td><td><code>/blog/bienfaits-sauna</code></td><td>🟡 Moy</td></tr>
-<tr><td style="color:#f0f2f5;font-weight:600">contrast therapy paris</td><td>320</td><td><span class="b bg">Niche</span></td><td><code>/contrast-therapy</code></td><td>🟡 Moy</td></tr>
-<tr><td style="color:#f0f2f5;font-weight:600">team building bien-être</td><td>480</td><td><span class="b bp">B2B</span></td><td><code>/team-building</code></td><td>🟡 Moy</td></tr>
-</tbody>
-</table>
-</div>
-<div class="c">
-<h3 style="color:#c084fc">🔎 Opportunités longue traîne</h3>
-<div class="g2">
-<div style="font-size:14px"><span style="color:#c084fc">→</span> sauna et bain froid paris</div>
-<div style="font-size:14px"><span style="color:#c084fc">→</span> expérience bain glacé paris</div>
-<div style="font-size:14px"><span style="color:#c084fc">→</span> séance breathwork paris centre</div>
-<div style="font-size:14px"><span style="color:#c084fc">→</span> récupération sportive bain froid paris</div>
-<div style="font-size:14px"><span style="color:#c084fc">→</span> meilleur sauna paris [arrondissement]</div>
-<div style="font-size:14px"><span style="color:#c084fc">→</span> enterrement de vie sauna paris</div>
-<div style="font-size:14px"><span style="color:#c084fc">→</span> cold plunge paris</div>
-<div style="font-size:14px"><span style="color:#c084fc">→</span> wim hof paris expérience</div>
-</div>
-</div>
+<div class="tl-week">
+  <div class="tl-label">Semaine 3</div>
+  <div class="tl-task">
+    <p><span class="tag red">Critique</span></p>
+    <p><strong>Créer /sauna-paris :</strong> Static Page complète (9 sections du template service). Page Settings SEO remplis. Schema FAQ. 800-1 200 mots.</p>
+  </div>
+  <div class="tl-task">
+    <p><span class="tag red">Critique</span></p>
+    <p><strong>Créer /bain-froid-paris :</strong> Dupliquer layout → adapter contenu. 800-1 200 mots.</p>
+  </div>
+  <div class="tl-task">
+    <p><span class="tag orange">Fort</span></p>
+    <p><strong>Setup blog CMS :</strong> Créer Collection "Blog Posts" dans Webflow. Construire le template page blog.</p>
+  </div>
 </div>
 
-<!-- PAGES -->
-<div class="sec" id="pages">
-<h2 class="st">📄 Pages à Créer dans Webflow</h2>
-<div class="co coy">📌 Pages services = <strong>Static Pages</strong>. Articles blog = <strong>CMS Collection "Blog Posts"</strong>.</div>
+<div class="tl-week">
+  <div class="tl-label">Semaine 4</div>
+  <div class="tl-task">
+    <p><span class="tag orange">Fort</span></p>
+    <p><strong>Créer /breathwork-paris :</strong> 600-800 mots. Template service.</p>
+  </div>
+  <div class="tl-task">
+    <p><span class="tag orange">Fort</span></p>
+    <p><strong>Enrichir /tarifs :</strong> Ajouter contenu SEO, comparatif formules, liens vers pages services.</p>
+  </div>
+ <div class="tl-task">
+        <p><span class="tag orange">Fort</span></p>
+        <p><strong>2 premiers articles blog :</strong> /blog/bienfaits-sauna + /blog/bienfaits-bain-froid. 1 200-1 500 mots chacun. Liens internes vers /sauna-paris et /bain-froid-paris.</p>
+      </div>
+      <div class="tl-task">
+        <p><span class="tag orange">Fort</span></p>
+        <p><strong>Google Business Profile :</strong> Optimiser la fiche : catégories (Sauna, Centre de bien-être), horaires, photos du lieu, premier post GBP, demander les premiers avis clients.</p>
+      </div>
+    </div>
+  </div>
 
-<div class="c" style="border-color:#ef4444"><code>/sauna-paris</code> <span class="b bgr">Static Page</span> <span style="float:right;font-size:13px">🔴 Sem. 1-2</span><div style="color:#f0f2f5;font-weight:600;margin:8px 0">Sauna à Paris — Expérience Nordique | Re-Set Club</div><span class="b bgr">🔑 sauna paris (6 600)</span> <span class="b bg">Conversion</span> <span class="b bgr">800-1 200 mots</span></div>
+  <h3 class="st2">🟠 MOIS 2 — Accélération</h3>
+  <div class="timeline">
+    <div class="tl-week">
+      <div class="tl-label">Semaine 5</div>
+      <div class="tl-task">
+        <p><span class="tag orange">Fort</span></p>
+        <p><strong>Créer /therapie-contraste-paris :</strong> 800-1 000 mots. Le principe scientifique, le protocole Re-Set, pour qui.</p>
+      </div>
+      <div class="tl-task">
+        <p><span class="tag orange">Fort</span></p>
+        <p><strong>Créer /faq dédiée :</strong> Migration des 9 questions + ajout de 6-8 nouvelles. Schema FAQPage. Liens internes vers chaque page service.</p>
+      </div>
+    </div>
 
-<div class="c" style="border-color:#3b82f6"><code>/bain-froid-paris</code> <span class="b bgr">Static Page</span> <span style="float:right;font-size:13px">🔴 Sem. 1-2</span><div style="color:#f0f2f5;font-weight:600;margin:8px 0">Bain Froid à Paris — Immersion Glacée | Re-Set Club</div><span class="b bgr">🔑 bain froid paris (1 900)</span> <span class="b bg">Conversion</span> <span class="b bgr">800-1 200 mots</span></div>
-
-<div class="c" style="border-color:#a855f7"><code>/breathwork-paris</code> <span class="b bgr">Static Page</span> <span style="float:right;font-size:13px">🔴 Sem. 2-3</span><div style="color:#f0f2f5;font-weight:600;margin:8px 0">Breathwork à Paris — Respiration Guidée | Re-Set Club</div><span class="b bgr">🔑 breathwork paris (880)</span> <span class="b bg">Conversion</span> <span class="b bgr">800-1 000 mots</span></div>
-
-<div class="c" style="border-color:#22c55e"><code>/tarifs</code> <span class="b bgr">Static Page</span> <span style="float:right;font-size:13px">🔴 Sem. 2-3</span><div style="color:#f0f2f5;font-weight:600;margin:8px 0">Nos Tarifs — Sauna & Bain Froid | Re-Set Club</div><span class="b bgr">🔑 tarif sauna paris (590)</span> <span class="b bg">Conversion</span> <span class="b bgr">500-700 mots</span></div>
-
-<div class="c" style="border-color:#eab308"><code>/concept</code> <span class="b bgr">Static Page</span> <span style="float:right;font-size:13px">🔴 Sem. 3</span><div style="color:#f0f2f5;font-weight:600;margin:8px 0">Notre Concept — Re-Set Club Paris</div><span class="b bgr">🔑 spa nordique paris</span> <span class="b bb">Branding+SEO</span> <span class="b bgr">600-900 mots</span></div>
-
-<div class="c" style="border-color:#22d3ee"><code>/contrast-therapy</code> <span class="b bgr">Static Page</span> <span style="float:right;font-size:13px">🟡 Mois 2</span><div style="color:#f0f2f5;font-weight:600;margin:8px 0">Contrast Therapy à Paris | Re-Set Club</div><span class="b bgr">🔑 contrast therapy paris (320)</span> <span class="b bg">Niche</span> <span class="b bgr">800-1 000 mots</span></div>
-
-<div class="c" style="border-color:#fb923c"><code>/team-building</code> <span class="b bgr">Static Page</span> <span style="float:right;font-size:13px">🟡 Mois 2</span><div style="color:#f0f2f5;font-weight:600;margin:8px 0">Team Building Bien-Être à Paris | Re-Set Club</div><span class="b bgr">🔑 team building bien-être (480)</span> <span class="b bp">B2B</span> <span class="b bgr">700-1 000 mots</span></div>
-
-<div class="c" style="border-color:#ec4899"><code>/blog/bienfaits-bain-froid</code> <span class="b bi">CMS Collection</span> <span style="float:right;font-size:13px">🔴 Sem. 4</span><div style="color:#f0f2f5;font-weight:600;margin:8px 0">Les Bienfaits du Bain Froid (Guide Complet)</div><span class="b bgr">🔑 bienfaits bain froid (3 600)</span> <span class="b bb">Trafic</span> <span class="b bgr">1 200-1 500 mots</span></div>
-
-<div class="c" style="border-color:#ec4899"><code>/blog/bienfaits-sauna</code> <span class="b bi">CMS Collection</span> <span style="float:right;font-size:13px">🔴 Sem. 4</span><div style="color:#f0f2f5;font-weight:600;margin:8px 0">Les Bienfaits du Sauna (Guide Complet)</div><span class="b bgr">🔑 bienfaits sauna (5 400)</span> <span class="b bb">Trafic</span> <span class="b bgr">1 200-1 500 mots</span></div>
+<div class="tl-week">
+  <div class="tl-label">Semaine 6</div>
+  <div class="tl-task">
+    <p><span class="tag yellow">Moyen</span></p>
+    <p><strong>Créer /team-building-sauna-paris :</strong> 700-1 000 mots. Offre entreprise, capacité d'accueil, formule, formulaire de contact dédié.</p>
+  </div>
+  <div class="tl-task">
+    <p><span class="tag orange">Fort</span></p>
+    <p><strong>2 articles blog supplémentaires :</strong> /blog/therapie-contraste-bienfaits + /blog/routine-sauna-bain-froid. 1 200-1 500 mots chacun.</p>
+  </div>
 </div>
 
-<!-- ARBO -->
-<div class="sec" id="arbo">
-<h2 class="st">🌳 Arborescence Idéale</h2>
-<div class="c">
-<div style="text-align:center;color:#f0f2f5;font-weight:700;font-size:18px;margin-bottom:16px">🏠 re-set.club (Accueil)</div>
-<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:16px">
-<div class="an" style="border-color:#ef4444;background:rgba(239,68,68,.1)"><div class="nm">Sauna</div><div class="ur">/sauna-paris</div><div class="tp">Static Page</div></div>
-<div class="an" style="border-color:#3b82f6;background:rgba(96,165,250,.1)"><div class="nm">Bain Froid</div><div class="ur">/bain-froid-paris</div><div class="tp">Static Page</div></div>
-<div class="an" style="border-color:#a855f7;background:rgba(168,85,247,.1)"><div class="nm">Breathwork</div><div class="ur">/breathwork-paris</div><div class="tp">Static Page</div></div>
-<div class="an" style="border-color:#22c55e;background:rgba(74,222,128,.1)"><div class="nm">Tarifs</div><div class="ur">/tarifs</div><div class="tp">Static Page</div></div>
-<div class="an" style="border-color:#eab308;background:rgba(251,191,36,.1)"><div class="nm">Concept</div><div class="ur">/concept</div><div class="tp">Static Page</div></div>
-</div>
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px">
-<div class="an" style="border-color:#22d3ee;background:rgba(34,211,238,.05)"><div class="nm">Contrast Therapy</div><div class="ur">/contrast-therapy</div><div class="tp">Static Page</div></div>
-<div class="an" style="border-color:#fb923c;background:rgba(249,115,22,.05)"><div class="nm">Team Building</div><div class="ur">/team-building</div><div class="tp">Static Page</div></div>
-<div class="an" style="border-color:#ec4899;background:rgba(244,114,182,.05)"><div class="nm">Blog</div><div class="ur">/blog</div><div class="tp">CMS Template</div></div>
-</div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-<div class="an" style="border-color:#4f46e5;border-style:dashed;background:rgba(79,70,229,.05)"><div class="nm" style="font-weight:400;font-size:13px">Bienfaits du bain froid</div><div class="tp" style="color:#818cf8">CMS Item</div></div>
-<div class="an" style="border-color:#4f46e5;border-style:dashed;background:rgba(79,70,229,.05)"><div class="nm" style="font-weight:400;font-size:13px">Bienfaits du sauna</div><div class="tp" style="color:#818cf8">CMS Item</div></div>
-<div class="an" style="border-color:#4f46e5;border-style:dashed;background:rgba(79,70,229,.05)"><div class="nm" style="font-weight:400;font-size:13px">Préparer son 1er bain froid</div><div class="tp" style="color:#818cf8">CMS Item</div></div>
-<div class="an" style="border-color:#4f46e5;border-style:dashed;background:rgba(79,70,229,.05)"><div class="nm" style="font-weight:400;font-size:13px">Sauna vs Hammam</div><div class="tp" style="color:#818cf8">CMS Item</div></div>
-</div>
+<div class="tl-week">
+  <div class="tl-label">Semaine 7</div>
+  <div class="tl-task">
+    <p><span class="tag orange">Fort</span></p>
+    <p><strong>Maillage interne complet :</strong> Vérifier que chaque page service lie vers les autres + /tarifs + /reservation + son article blog. Chaque article lie vers sa page service + /reservation. Optimiser les textes d'ancres (pas de "cliquez ici", utiliser des mots-clés).</p>
+  </div>
+  <div class="tl-task">
+    <p><span class="tag yellow">Moyen</span></p>
+    <p><strong>Alt text audit :</strong> Passer en revue toutes les images du site. Ajouter des alt text descriptifs avec mot-clé naturel.</p>
+  </div>
 </div>
 
-<antArtifact identifier="seo-fix" type="application/vnd.ant.code" language="html" title="index.html — Ligne 199 à la fin">
+<div class="tl-week">
+  <div class="tl-label">Semaine 8</div>
+  <div class="tl-task">
+    <p><span class="tag orange">Fort</span></p>
+    <p><strong>Premier reporting :</strong> Export GSC (impressions, clics, positions moyennes par requête). Export GA4 (trafic organique vs autres). Documenter l'état des lieux à M+2 pour comparaison future.</p>
+  </div>
+  <div class="tl-task">
+    <p><span class="tag yellow">Moyen</span></p>
+    <p><strong>Ajustements :</strong> Identifier les pages qui gagnent en impressions mais pas en clics → optimiser les titles/metas. Identifier les requêtes émergentes → ajuster le contenu.</p>
+  </div>
+  <div class="tl-task">
+    <p><span class="tag yellow">Moyen</span></p>
+    <p><strong>Collecte d'avis Google :</strong> Mettre en place un process systématique : QR code en sortie de session, email post-visite, lien direct vers la page d'avis GBP.</p>
+  </div>
 </div>
-</div>
+  </div>
 
-<!-- TECHNIQUE -->
-<div class="sec" id="tech">
-<h2 class="st">⚙️ Recommandations Techniques Webflow</h2>
+  <h3 class="st2">📊 Résultats attendus à fin Mois 2</h3>
+  <table>
+    <tr><th>Indicateur</th><th>Aujourd'hui</th><th>Cible M+2</th></tr>
+    <tr><td>Pages indexées</td><td>3-4</td><td>14-15</td></tr>
+    <tr><td>Contenu total (mots)</td><td>~650</td><td>~12 000</td></tr>
+    <tr><td>Trafic organique non-brandé</td><td>~0</td><td>200-400 visites/mois</td></tr>
+    <tr><td>Requêtes positionnées top 20</td><td>~0</td><td>15-25</td></tr>
+    <tr><td>Schema structurés</td><td>0</td><td>3 (LocalBusiness, FAQPage, Organization)</td></tr>
+    <tr><td>Conformité RGPD</td><td>❌</td><td>✅</td></tr>
+    <tr><td>Fiche Google Business optimisée</td><td>Partiel</td><td>✅</td></tr>
+    <tr><td>Avis Google</td><td>?</td><td>10-15 avis collectés</td></tr>
+  </table>
 
-<div class="c" style="border-color:#ef4444">
-<div class="sh" style="background:rgba(239,68,68,.15)"><h3 style="color:#f87171">🍪 Intégration Axeptio (RGPD) — CRITIQUE</h3></div>
-<div class="rc"><div class="a" style="color:#f87171">Étape 1 — Créer le projet Axeptio</div><div class="h">📍 axeptio.eu → compte → projet "re-set.club" → catégories : Nécessaires, Analytiques (GA4), Marketing (Pixel)</div></div>
-<div class="rc"><div class="a" style="color:#f87171">Étape 2 — Coller dans Webflow</div><div class="h">📍 Project Settings → Custom Code → <strong>Head Code</strong> → coller EN PREMIER</div>
-<pre>&lt;script&gt;
-window.axeptioSettings = {
-  clientId: "VOTRE_CLIENT_ID",
-  cookiesVersion: "re-set.club-fr"
-};
-(function(d,s){var t=d.getElementsByTagName(s)[0],
-e=d.createElement(s);e.async=true;
-e.src="//static.axept.io/sdk.js";
-t.parentNode.insertBefore(e,t);
-})(document,"script");
-&lt;/script&gt;</pre></div>
-<div class="rc"><div class="a" style="color:#f87171">Étape 3 — Conditionner GA4</div><div class="h">📍 Head Code → modifier le script GA4 existant</div>
-<pre>&lt;script type="text/plain" data-cookieconsent="analytics"
-  src="https://www.googletagmanager.com/gtag/js?id=G-XXXXX"&gt;&lt;/script&gt;
-&lt;script type="text/plain" data-cookieconsent="analytics"&gt;
-  window.dataLayer=window.dataLayer||[];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js',new Date());gtag('config','G-XXXXX');
-&lt;/script&gt;</pre></div>
-<div class="rc"><div class="a" style="color:#f87171">Étape 4 — Conditionner Meta Pixel</div><div class="h">📍 Même principe : <code>type="text/plain" data-cookieconsent="marketing"</code></div></div>
-<div class="rc"><div class="a" style="color:#f87171">Étape 5 — Page /politique-cookies</div><div class="h">📍 Créer Static Page → lister cookies → lien dans Footer Symbol</div></div>
-</div>
-
-<div class="c">
-<div class="sh" style="background:rgba(251,191,36,.15)"><h3 style="color:#fbbf24">🏷️ SEO On-Page dans Webflow</h3></div>
-<div class="rc"><div class="a" style="color:#fbbf24">SEO Title</div><div class="h">📍 Page Settings → SEO Title (60 car. max)</div><div class="d">Format : "Mot-clé — Complément | Re-Set Club"</div></div>
-<div class="rc"><div class="a" style="color:#fbbf24">Meta Description</div><div class="h">📍 Page Settings → Meta Description (155 car. max)</div><div class="d">Inclure mot-clé + CTA. Ex: "Découvrez notre sauna finlandais à Paris. Réservez en ligne."</div></div>
-<div class="rc"><div class="a" style="color:#fbbf24">Open Graph Image</div><div class="h">📍 Page Settings → Open Graph Image (1200×630px)</div></div>
-<div class="rc"><div class="a" style="color:#fbbf24">H1 unique</div><div class="h">📍 Designer → sélectionner texte → Tag = H1. Un seul par page.</div></div>
-<div class="rc"><div class="a" style="color:#fbbf24">Hiérarchie Hn</div><div class="h">📍 Designer → Tag pour chaque texte. H1→H2→H3, ne jamais sauter.</div></div>
-<div class="rc"><div class="a" style="color:#fbbf24">Alt text images</div><div class="h">📍 Designer → Image → Settings → Alt Text descriptif avec mot-clé</div></div>
-<div class="rc"><div class="a" style="color:#fbbf24">URL Slugs</div><div class="h">📍 Page Settings → Slug court : sauna-paris (pas page-1)</div></div>
+  <blockquote>
+    <strong>Note importante :</strong> les résultats SEO sont progressifs. Le vrai impact se mesure à M+4/M+6. Les mois 1-2 posent les fondations sans lesquelles rien ne peut fonctionner. Les positions Google mettent 3-6 mois à se stabiliser après publication d'un contenu.
+  </blockquote>
 </div>
 
-<div class="c">
-<div class="sh" style="background:rgba(168,85,247,.15)"><h3 style="color:#c084fc">📋 Schema.org — Données structurées</h3></div>
-<p style="font-size:13px;color:#8b90a0;margin-bottom:12px">📍 Page Settings → Custom Code → Before &lt;/body&gt; tag</p>
-<div class="rc"><div class="a" style="color:#c084fc">LocalBusiness (accueil)</div>
-<pre>&lt;script type="application/ld+json"&gt;
-{"@context":"https://schema.org",
-"@type":"HealthAndBeautyBusiness",
-"name":"Re-Set Club",
-"url":"https://re-set.club",
-"telephone":"+33...",
-"address":{"@type":"PostalAddress",
-"streetAddress":"...","addressLocality":"Paris",
-"postalCode":"75...","addressCountry":"FR"},
-"openingHours":"Mo-Su 09:00-21:00",
-"priceRange":"€€"}
-&lt;/script&gt;</pre></div>
-<div class="rc"><div class="a" style="color:#c084fc">FAQ (pages services)</div>
-<pre>&lt;script type="application/ld+json"&gt;
-{"@context":"https://schema.org",
-"@type":"FAQPage",
-"mainEntity":[
-{"@type":"Question","name":"Combien coûte une séance ?",
-"acceptedAnswer":{"@type":"Answer","text":"À partir de..."}},
-{"@type":"Question","name":"Faut-il réserver ?",
-"acceptedAnswer":{"@type":"Answer","text":"Oui..."}}
-]}
-&lt;/script&gt;</pre></div>
+<!-- FOOTER -->
+<div style="text-align:center; padding:48px 24px; color:#333; font-size:13px;">
+  Plan SEO Re-Set.Club — Juin 2025<br>
+  Document confidentiel
 </div>
 
-<div class="c">
-<div class="sh" style="background:rgba(74,222,128,.15)"><h3 style="color:#4ade80">🚀 Performances (80/85 — maintenir)</h3></div>
-<div class="co cog">✅ Score déjà bon. Actions pour maintenir en ajoutant du contenu.</div>
-<div class="rc"><div class="a" style="color:#4ade80">Images WebP</div><div class="h">📍 Compresser via squoosh.app → upload Asset Manager. Viser &lt;200Ko.</div></div>
-<div class="rc"><div class="a" style="color:#4ade80">Lazy Loading</div><div class="h">📍 Designer → Image → Settings → Loading: Lazy (sauf hero = Eager)</div></div>
-<div class="rc"><div class="a" style="color:#4ade80">Limiter polices</div><div class="h">📍 Project Settings → Fonts → 2 variantes max. font-display: swap.</div></div>
-<div class="rc"><div class="a" style="color:#4ade80">Animations</div><div class="h">📍 Éviter Lottie lourds. Préférer transitions CSS simples pour nouvelles pages.</div></div>
-</div>
-
-<div class="c">
-<div class="sh" style="background:rgba(96,165,250,.15)"><h3 style="color:#60a5fa">🗺️ Sitemap & Indexation</h3></div>
-<div class="rc"><div class="a" style="color:#60a5fa">Sitemap auto</div><div class="h">📍 Webflow génère /sitemap.xml auto. Vérifier après chaque publish.</div></div>
-<div class="rc"><div class="a" style="color:#60a5fa">Google Search Console</div><div class="h">📍 Vérifier via balise HTML dans Head Code → soumettre /sitemap.xml</div></div>
-<div class="rc"><div class="a" style="color:#60a5fa">Forcer indexation</div><div class="h">📍 GSC → Inspection d'URL → coller URL → "Demander l'indexation" pour chaque page</div></div>
-</div>
-</div>
-
-<!-- TEMPLATES -->
-<div class="sec" id="tpl">
-<h2 class="st">📐 Templates de Pages Webflow</h2>
-
-<div class="c" style="border-color:#ef4444">
-<div class="sh" style="background:rgba(239,68,68,.15)"><h3 style="color:#f87171">📐 Template : Page Service (Static Page)</h3><p style="color:#8b90a0;font-size:12px;margin-top:4px">Pour : /sauna-paris, /bain-froid-paris, /breathwork-paris</p></div>
-<div class="co coy">🔧 <strong>Webflow :</strong> Créer Static Page → slug → Page Settings SEO → construire sections empilées → Rich Text pour contenu → dupliquer pour autres services</div>
-<div class="rc"><span class="b bgr" style="margin-right:6px">Section 1</span><div class="a">Hero Section</div><div class="h">H1 avec mot-clé + sous-titre 2 lignes + CTA "Réserver" (Link Block vers booking) + image background</div></div>
-<div class="rc"><span class="b bgr" style="margin-right:6px">Section 2</span><div class="a">Introduction (Rich Text)</div><div class="h">200-300 mots. Qu'est-ce que [service], pourquoi chez Re-Set. Mot-clé dans les 100 premiers mots.</div></div>
-<div class="rc"><span class="b bgr" style="margin-right:6px">Section 3</span><div class="a">Bénéfices (Grid)</div><div class="h">4-6 bénéfices en cards (Div Blocks). Icône + H3 + texte court. Ex: "Récupération musculaire", "Boost immunitaire"</div></div>
-<div class="rc"><span class="b bgr" style="margin-right:6px">Section 4</span><div class="a">Comment ça se passe (Rich Text)</div><div class="h">Déroulé d'une séance étape par étape. H2 + liste numérotée. Rassure les nouveaux.</div></div>
-<div class="rc"><span class="b bgr" style="margin-right:6px">Section 5</span><div class="a">Galerie (Grid d'images)</div><div class="h">4-6 photos. Alt text optimisé sur chaque image.</div></div>
-<div class="rc"><span class="b bgr" style="margin-right:6px">Section 6</span><div class="a">Tarifs aperçu + CTA</div><div class="h">Résumé des prix + bouton "Voir tous les tarifs" → lien vers /tarifs</div></div>
-<div class="rc"><span class="b bgr" style="margin-right:6px">Section 7</span><div class="a">FAQ (Rich Text)</div><div class="h">5-8 questions. Utiliser H3 pour les questions. + Schema FAQ en Custom Code page.</div></div>
-<div class="rc"><span class="b bgr" style="margin-right:6px">Section 8</span><div class="a">Cross-sell</div><div class="h">"Découvrez aussi" → Link Blocks vers les 2 autres services. Maillage interne.</div></div>
-<div class="rc"><span class="b bgr" style="margin-right:6px">Section 9</span><div class="a">CTA final</div><div class="h">Bouton "Réserver maintenant" pleine largeur + lien vers booking.</div></div>
-</div>
-
-<div class="c" style="border-color:#4f46e5">
-<div class="sh" style="background:rgba(79,70,229,.15)"><h3 style="color:#818cf8">📐 Template : Article Blog (CMS Collection)</h3></div>
-<div class="co coy">🔧 <strong>Webflow CMS :</strong> Créer Collection "Blog Posts" → champs : Title, Slug, Thumbnail, Author, Body (Rich Text), Meta Description, Category → Template Page avec layout</div>
-<div class="rc"><span class="b bi" style="margin-right:6px">Zone 1</span><div class="a">Header article</div><div class="h">H1 = titre (champ Title bindé). Date + temps de lecture + catégorie.</div></div>
-<div class="rc"><span class="b bi" style="margin-right:6px">Zone 2</span><div class="a">Image principale</div><div class="h">Champ Thumbnail bindé. Alt text = titre article.</div></div>
-<div class="rc"><span class="b bi" style="margin-right:6px">Zone 3</span><div class="a">Corps (Rich Text bindé)</div><div class="h">Champ Body. 1 200-1 500 mots. H2/H3 structurés. Liens internes vers pages services dans le texte.</div></div>
-<div class="rc"><span class="b bi" style="margin-right:6px">Zone 4</span><div class="a">CTA encadré</div><div class="h">Div Block fixe dans le template (pas dans le Rich Text). "Envie de tester ? Réservez →" avec lien booking.</div></div>
-<div class="rc"><span class="b bi" style="margin-right:6px">Zone 5</span><div class="a">Articles liés</div><div class="h">Collection List filtrée par catégorie (max 3). Maillage automatique entre articles.</div></div>
-</div>
-</div>
-
-<!-- ROADMAP -->
-<div class="sec" id="road">
-<h2 class="st">🗺️ Roadmap Mois 1 & 2</h2>
-
-<div class="c" style="border-color:#ef4444">
-<h3 style="color:#f87171;margin-bottom:16px">🔴 MOIS 1 — Fondations</h3>
-
-<span class="wl" style="background:#7f1d1d;color:white">Semaine 1</span>
-<div class="tr"><span class="tx">Webflow : créer Static Page <code>/sauna-paris</code> → slug "sauna-paris" → construire les 9 sections du template service → remplir Page Settings (SEO Title, Meta Desc, OG Image)</span><div class="tg"><span class="b br">Critique</span><span class="b bp">Fort</span></div></div>
-<div class="tr"><span class="tx">Webflow : créer Static Page <code>/bain-froid-paris</code> → dupliquer layout de sauna-paris → adapter contenu → Page Settings SEO</span><div class="tg"><span class="b br">Critique</span><span class="b bp">Fort</span></div></div>
-<div class="tr"><span class="tx">Project Settings → Custom Code → Head Code : coller script Axeptio EN PREMIER, puis conditionner GA4 et Pixel avec <code>type="text/plain"</code></span><div class="tg"><span class="b br">Critique</span><span class="b bgr">Faible</span></div></div>
-<div class="tr"><span class="tx">Google Search Console : créer propriété → vérifier via balise HTML dans Head Code Webflow → soumettre /sitemap.xml</span><div class="tg"><span class="b bo">Fort</span><span class="b bgr">Faible</span></div></div>
-
-<span class="wl" style="background:#7f1d1d;color:white;margin-top:16px">Semaine 2</span>
-<div class="tr"><span class="tx">Webflow : créer Static Page <code>/breathwork-paris</code> → layout service → Page Settings SEO</span><div class="tg"><span class="b br">Critique</span><span class="b bp">Fort</span></div></div>
-<div class="tr"><span class="tx">Webflow : créer Static Page <code>/tarifs</code> → tableau de prix → liens vers chaque service → Page Settings SEO</span><div class="tg"><span class="b br">Critique</span><span class="b bb">Moyen</span></div></div>
-<div class="tr"><span class="tx">Mettre à jour le Navbar Symbol : ajouter liens vers Sauna, Bain Froid, Breathwork, Tarifs</span><div class="tg"><span class="b bo">Fort</span><span class="b bgr">Faible</span></div></div>
-<div class="tr"><span class="tx">Mettre à jour le Footer Symbol : liens vers toutes les pages + mentions légales + politique cookies</span><div class="tg"><span class="b bo">Fort</span><span class="b bgr">Faible</span></div></div>
-
-<span class="wl" style="background:#7f1d1d;color:white;margin-top:16px">Semaine 3</span>
-<div class="tr"><span class="tx">Webflow : créer Static Page <code>/concept</code> → histoire, philosophie, l'équipe → Page Settings SEO</span><div class="tg"><span class="b bb">Moyen</span><span class="b bb">Moyen</span></div></div>
-<div class="tr"><span class="tx">Google Business Profile : créer/optimiser fiche → photos HD, horaires, catégorie "Sauna", description avec mots-clés, lien site</span><div class="tg"><span class="b bo">Fort</span><span class="b bgr">Faible</span></div></div>
-<div class="tr"><span class="tx">Schema LocalBusiness : coller JSON-LD dans accueil → Page Settings → Custom Code → Before &lt;/body&gt;</span><div class="tg"><span class="b bb">Moyen</span><span class="b bgr">Faible</span></div></div>
-<div class="tr"><span class="tx">Schema FAQ : coller JSON-LD dans chaque page service → Before &lt;/body&gt;</span><div class="tg"><span class="b bb">Moyen</span><span class="b bgr">Faible</span></div></div>
-<div class="tr"><span class="tx">Pages existantes : corriger tous les H1, ajouter Alt text à toutes les images, vérifier slugs</span><div class="tg"><span class="b bo">Fort</span><span class="b bb">Moyen</span></div></div>
-
-<span class="wl" style="background:#7f1d1d;color:white;margin-top:16px">Semaine 4</span>
-<div class="tr"><span class="tx">Activer CMS : créer Collection "Blog Posts" → champs Title, Slug, Body (Rich Text), Thumbnail, Meta Desc, Category</span><div class="tg"><span class="b bo">Fort</span><span class="b bb">Moyen</span></div></div>
-<div class="tr"><span class="tx">CMS Template : designer la page template Blog Post (header, image, Rich Text, CTA, articles liés)</span><div class="tg"><span class="b bo">Fort</span><span class="b bp">Fort</span></div></div>
-<div class="tr"><span class="tx">Publier article 1 : "Les Bienfaits du Bain Froid" (1 500 mots) → liens vers /bain-froid-paris et /tarifs</span><div class="tg"><span class="b bb">Moyen</span><span class="b bp">Fort</span></div></div>
-<div class="tr"><span class="tx">Publier article 2 : "Les Bienfaits du Sauna" (1 500 mots) → liens vers /sauna-paris et /tarifs</span><div class="tg"><span class="b bb">Moyen</span><span class="b bp">Fort</span></div></div>
-<div class="tr"><span class="tx">Créer page <code>/politique-cookies</code> → lien Footer Symbol → bouton Axeptio</span><div class="tg"><span class="b bb">Moyen</span><span class="b bgr">Faible</span></div></div>
-<div class="tr"><span class="tx">GSC : Inspection d'URL → "Demander l'indexation" pour chaque nouvelle page</span><div class="tg"><span class="b bo">Fort</span><span class="b bgr">Faible</span></div></div>
-
-<div class="dl dlr">
-<h4>✅ Livrables fin de Mois 1</h4>
-<ul class="l">
-<li>5 Static Pages créées (sauna, bain froid, breathwork, tarifs, concept)</li>
-<li>CMS Blog activé + 2 articles publiés</li>
-<li>Axeptio intégré + GA4 conditionné + GSC opérationnel</li>
-<li>Google Business Profile optimisé</li>
-<li>Maillage Navbar + Footer Symbol + liens internes</li>
-<li>Schema LocalBusiness + FAQ en place</li>
-</ul>
-</div>
-</div>
-
-<div class="c" style="border-color:#fb923c">
-<h3 style="color:#fb923c;margin-bottom:16px">🟠 MOIS 2 — Expansion</h3>
-
-<span class="wl" style="background:#7c2d12;color:white">Semaine 5</span>
-<div class="tr"><span class="tx">Webflow : créer Static Page <code>/contrast-therapy</code> → layout service → liens vers /sauna-paris + /bain-froid-paris</span><div class="tg"><span class="b bb">Moyen</span><span class="b bp">Fort</span></div></div>
-<div class="tr"><span class="tx">Publier article 3 : "Comment se Préparer à son Premier Bain Froid" → lien vers /bain-froid-paris</span><div class="tg"><span class="b bb">Moyen</span><span class="b bp">Fort</span></div></div>
-<div class="tr"><span class="tx">Backlinks : inscription annuaires PagesJaunes, Yelp, TripAdvisor, Sortir à Paris (NAP identique)</span><div class="tg"><span class="b bb">Moyen</span><span class="b bb">Moyen</span></div></div>
-
-<span class="wl" style="background:#7c2d12;color:white;margin-top:16px">Semaine 6</span>
-<div class="tr"><span class="tx">Webflow : créer Static Page <code>/team-building</code> → layout B2B → formulaire devis (Webflow Forms)</span><div class="tg"><span class="b bb">Moyen</span><span class="b bp">Fort</span></div></div>
-<div class="tr"><span class="tx">Publier article 4 : "Sauna vs Hammam : Quelles Différences ?" → lien vers /sauna-paris</span><div class="tg"><span class="b bb">Moyen</span><span class="b bp">Fort</span></div></div>
-<div class="tr"><span class="tx">Backlinks : contacter 5 blogs bien-être / sport parisiens pour article invité ou mention</span><div class="tg"><span class="b bb">Moyen</span><span class="b bp">Fort</span></div></div>
-
-<span class="wl" style="background:#7c2d12;color:white;margin-top:16px">Semaine 7</span>
-<div class="tr"><span class="tx">Enrichir pages services : ajouter 200-300 mots Rich Text + 2-3 nouvelles FAQ par page</span><div class="tg"><span class="b bb">Moyen</span><span class="b bb">Moyen</span></div></div>
-<div class="tr"><span class="tx">Activer Lazy Load : Designer → chaque image sauf hero → Settings → Loading: Lazy</span><div class="tg"><span class="b bb">Moyen</span><span class="b bgr">Faible</span></div></div>
-<div class="tr"><span class="tx">Vérifier /sitemap.xml inclut toutes nouvelles pages → re-soumettre dans GSC si besoin</span><div class="tg"><span class="b bb">Moyen</span><span class="b bgr">Faible</span></div></div>
-
-<span class="wl" style="background:#7c2d12;color:white;margin-top:16px">Semaine 8</span>
-<div class="tr"><span class="tx">Premier reporting : GSC (impressions, clics, positions) + GA4 (trafic organique, pages vues)</span><div class="tg"><span class="b bo">Fort</span><span class="b bgr">Faible</span></div></div>
-<div class="tr"><span class="tx">Ajuster stratégie : identifier mots-clés en progression → renforcer ces pages</span><div class="tg"><span class="b bo">Fort</span><span class="b bb">Moyen</span></div></div>
-<div class="tr"><span class="tx">Collecter et afficher avis Google sur pages services pour social proof</span><div class="tg"><span class="b bb">Moyen</span><span class="b bgr">Faible</span></div></div>
-
-<div class="dl dlo">
-<h4>✅ Livrables fin de Mois 2</h4>
-<ul class="l">
-<li>2 Static Pages supplémentaires (contrast therapy + team building)</li>
-<li>2 articles blog CMS supplémentaires (total : 4)</li>
-<li>~15 backlinks cumulés (annuaires + éditoriaux)</li>
-<li>FAQ enrichies + Schema.org sur toutes les pages</li>
-<li>Premier reporting GSC + GA4 avec données réelles</li>
-<li>Premières positions attendues sur requêtes longue traîne</li>
-</ul>
-</div>
-</div>
-
-<div class="c">
-<h3 style="color:#f0f2f5;margin-bottom:16px">📊 Résumé des 2 mois</h3>
-<div class="sg">
-<div class="si"><div class="v">11</div><div class="sl">Pages créées</div><div style="font-size:11px;color:#8b90a0">7 Static + 4 CMS</div></div>
-<div class="si"><div class="v">~15</div><div class="sl">Backlinks</div><div style="font-size:11px;color:#8b90a0">annuaires + éditoriaux</div></div>
-<div class="si"><div class="v">~12K</div><div class="sl">Mots publiés</div><div style="font-size:11px;color:#8b90a0">contenu SEO optimisé</div></div>
-<div class="si"><div class="v">200-400</div><div class="sl">Visites/mois</div><div style="font-size:11px;color:#8b90a0">estimation fin M2</div></div>
-</div>
-</div>
-</div>
-
-</div><!-- fin .ctn -->
-
-<footer>Plan SEO Re-Set.Club — Généré Juin 2025 — Adapté Webflow</footer>
-
-<script>
-document.querySelectorAll('nav button').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    document.querySelectorAll('nav button').forEach(b=>b.classList.remove('on'));
-    document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
-    btn.classList.add('on');
-    document.getElementById(btn.dataset.t).classList.add('on');
-  });
-});
-</script>
 </body>
 </html>
 </antArtifact>
