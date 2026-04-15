@@ -1,637 +1,1716 @@
-<antArtifact identifier="seo-reset-full-v3-p1" type="application/vnd.ant.code" language="html" title="Plan SEO Re-Set.Club — PARTIE 1/2">
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plan SEO — Re-Set.Club</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#e0e0e0;line-height:1.7}
-nav{position:sticky;top:0;z-index:100;background:rgba(10,10,10,.92);backdrop-filter:blur(12px);border-bottom:1px solid #1a1a1a;padding:12px 0;overflow-x:auto}
-nav .inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;gap:8px;flex-wrap:nowrap}
-nav a{color:#888;text-decoration:none;font-size:13px;font-weight:500;padding:6px 14px;border-radius:8px;white-space:nowrap;transition:all .2s}
-nav a:hover{color:#fff;background:#1a1a1a}
-.sec{max-width:1100px;margin:0 auto;padding:60px 24px;border-bottom:1px solid #141414}
-.st{font-size:28px;font-weight:800;margin-bottom:32px;background:linear-gradient(135deg,#c97a3a,#e8a55a);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.st2{font-size:20px;font-weight:700;color:#fff;margin:36px 0 16px;padding-left:14px;border-left:3px solid #c97a3a}
-.st3{font-size:16px;font-weight:600;color:#ccc;margin:24px 0 10px}
-p,li{font-size:15px;color:#aaa;margin-bottom:10px}
-li{margin-left:20px}
-strong{color:#e0e0e0}
-.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:16px 0}
-.card{background:#111;border:1px solid #1e1e1e;border-radius:12px;padding:20px}
-.card h4{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
-.card p{font-size:14px;margin-bottom:6px}
-.tag{display:inline-block;font-size:11px;font-weight:600;padding:3px 10px;border-radius:6px;margin-right:6px}
-.tag.red{background:#3a1515;color:#ff6b6b}
-.tag.orange{background:#3a2a15;color:#ffaa5b}
-.tag.green{background:#153a1a;color:#6bffaa}
-.tag.yellow{background:#3a3515;color:#ffd55b}
-.tag.blue{background:#15253a;color:#5bb8ff}
-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
-th{text-align:left;padding:12px 16px;background:#151515;color:#c97a3a;font-weight:600;border-bottom:2px solid #222}
-td{padding:10px 16px;border-bottom:1px solid #1a1a1a;color:#aaa}
-tr:hover td{background:#111}
-blockquote{border-left:3px solid #c97a3a;padding:16px 20px;margin:20px 0;background:#111;border-radius:0 8px 8px 0;font-size:14px;color:#bbb}
-code{background:#1a1a1a;padding:2px 8px;border-radius:4px;font-size:13px;color:#e8a55a}
-.timeline{margin:20px 0}
-.tl-week{margin-bottom:24px;padding:20px;background:#111;border:1px solid #1e1e1e;border-radius:12px}
-.tl-label{font-size:13px;font-weight:700;color:#c97a3a;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
-.tl-task{padding:10px 0;border-bottom:1px solid #1a1a1a}
-.tl-task:last-child{border-bottom:none}
-.arbo-tree{margin:20px 0}
-.arbo-node{padding:10px 16px;margin:4px 0;background:#111;border-left:3px solid #c97a3a;border-radius:0 8px 8px 0;font-size:14px}
-.arbo-node.sub{margin-left:32px;border-left-color:#5bb8ff}
-.arbo-node.sub2{margin-left:64px;border-left-color:#6bffaa}
-.arbo-link{font-size:12px;color:#666;margin-left:8px}
-.hero{text-align:center;padding:80px 24px 40px}
-.hero h1{font-size:42px;font-weight:800;background:linear-gradient(135deg,#c97a3a,#e8a55a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:16px}
-.hero p{font-size:18px;color:#888;max-width:600px;margin:0 auto}
-@media(max-width:768px){.hero h1{font-size:28px}.st{font-size:22px}nav a{font-size:12px;padding:4px 10px}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit SEO — RE-SET Club | Avril 2026</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --surface: #141414;
+            --surface-2: #1c1c1c;
+            --border: #2a2a2a;
+            --text: #e0e0e0;
+            --text-muted: #888;
+            --accent: #4fc3f7;
+            --accent-2: #81c784;
+            --accent-3: #ffb74d;
+            --accent-red: #ef5350;
+            --accent-purple: #b39ddb;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 3rem;
+        }
+
+        .header h1 { font-size: 2.4rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 0.5rem; }
+        .header .subtitle { color: var(--text-muted); font-size: 1rem; }
+
+        .nav {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+            padding: 1rem;
+            background: var(--surface);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .nav a:hover { color: var(--accent); background: var(--surface-2); }
+
+        .section { margin-bottom: 4rem; }
+        .section-label { font-size: 0.75rem; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.5rem; }
+        .section h2 { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.75rem; }
+        .section-intro { color: var(--text-muted); margin-bottom: 2rem; max-width: 720px; }
+
+        .subsection { margin-bottom: 2.5rem; }
+        .subsection h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .kpi-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.25rem;
+        }
+
+        .kpi-card .label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
+        .kpi-card .value { font-size: 1.8rem; font-weight: 700; }
+        .kpi-card .sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem; }
+        .kpi-card.positive .value { color: var(--accent-2); }
+        .kpi-card.warning .value { color: var(--accent-3); }
+        .kpi-card.negative .value { color: var(--accent-red); }
+        .kpi-card.neutral .value { color: var(--accent); }
+
+        .table-wrapper { overflow-x: auto; margin-bottom: 1.5rem; }
+
+        table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+        th { background: var(--surface-2); color: var(--text-muted); font-weight: 600; text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        td { padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background: var(--surface); }
+
+        .tag { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+        .tag-blue { background: rgba(79,195,247,0.15); color: var(--accent); }
+        .tag-green { background: rgba(129,199,132,0.15); color: var(--accent-2); }
+        .tag-orange { background: rgba(255,183,77,0.15); color: var(--accent-3); }
+        .tag-red { background: rgba(239,83,80,0.15); color: var(--accent-red); }
+        .tag-purple { background: rgba(179,157,219,0.15); color: var(--accent-purple); }
+
+        .diag-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem; }
+        @media (max-width: 768px) { .diag-grid { grid-template-columns: 1fr; } }
+
+        .diag-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.25rem;
+            border-left: 3px solid var(--border);
+        }
+
+        .diag-card h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .diag-card p { font-size: 0.85rem; color: var(--text-muted); }
+        .diag-card.force { border-left-color: var(--accent-2); }
+        .diag-card.faiblesse { border-left-color: var(--accent-red); }
+        .diag-card.opportunite { border-left-color: var(--accent); }
+
+        .note {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--accent-3);
+            border-radius: 6px;
+            padding: 1rem 1.25rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .callout {
+            border-radius: 8px;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .callout-green { background: rgba(129,199,132,0.08); border: 1px solid rgba(129,199,132,0.25); color: var(--accent-2); }
+        .callout-blue { background: rgba(79,195,247,0.08); border: 1px solid rgba(79,195,247,0.25); color: var(--accent); }
+        .callout-red { background: rgba(239,83,80,0.08); border: 1px solid rgba(239,83,80,0.25); color: var(--accent-red); }
+
+        .divider { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
+
+        .archi-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .archi-card h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem; }
+        .archi-url { font-family: monospace; font-size: 0.8rem; color: var(--accent); margin-bottom: 0.75rem; }
+        .archi-detail { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+        .archi-detail strong { color: var(--text); }
+
+        code { font-family: monospace; background: var(--surface-2); padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.8rem; color: var(--accent); }
+
+        .bench-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+
+        .bench-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.25rem;
+        }
+
+        .bench-card.highlight { border-color: var(--accent); }
+        .bench-card h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.25rem; }
+        .bench-card .bench-url { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.75rem; }
+        .bench-stat { display: flex; justify-content: space-between; font-size: 0.8rem; padding: 0.25rem 0; border-bottom: 1px solid var(--border); }
+        .bench-stat:last-child { border-bottom: none; }
+        .bench-stat .stat-label { color: var(--text-muted); }
+        .bench-stat .stat-val { font-weight: 600; }
+
+        /* ===== PLAN D'ACTION — CHECKLIST ===== */
+        .plan-group { margin-bottom: 2rem; }
+
+        .plan-group-title {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .checklist { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        .checklist-item:hover { border-color: var(--accent); }
+
+        .checklist-item input[type="checkbox"] {
+            margin-top: 0.2rem;
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            accent-color: var(--accent-2);
+            cursor: pointer;
+        }
+
+        .checklist-item input[type="checkbox"]:checked + .checklist-content .checklist-title {
+            text-decoration: line-through;
+            color: var(--text-muted);
+        }
+
+        .checklist-content { flex: 1; }
+
+        .checklist-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .checklist-desc {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .checklist-desc a { color: var(--accent); }
+    </style>
 </head>
 <body>
 
-<nav>
-<div class="inner">
-<a href="#audit">Audit</a>
-<a href="#semantique">Sémantique</a>
-<a href="#arbo">Arborescence</a>
-<a href="#pages">Pages à créer</a>
-<a href="#templates">Templates</a>
-<a href="#tech">Technique</a>
-<a href="#anglais">Page EN</a>
-<a href="#roadmap">Roadmap</a>
+<div class="header">
+    <p class="section-label">Audit SEO Complet</p>
+    <h1>RE-SET Club</h1>
+    <p class="subtitle">Avril 2026 — Analyse GSC · GA4 · SEMrush · Benchmark concurrents</p>
 </div>
+
+<nav class="nav">
+    <a href="#dashboard">01 Dashboard</a>
+    <a href="#diagnostic">02 Diagnostic</a>
+    <a href="#semantique">03 Analyse sémantique</a>
+    <a href="#benchmark">04 Benchmark</a>
+    <a href="#architecture">05 Architecture cible</a>
+    <a href="#plan">06 Plan d'action</a>
 </nav>
 
-<div class="hero">
-<h1>Plan SEO — Re-Set.Club</h1>
-<p>Audit complet, arborescence, recommandations techniques et roadmap mois 1 &amp; 2</p>
-<p style="font-size:13px;color:#555;margin-top:12px">Juin 2025 — Document confidentiel</p>
+<!-- ============================================ -->
+<!-- SECTION 1 : DASHBOARD -->
+<!-- ============================================ -->
+<div class="section" id="dashboard">
+    <p class="section-label">Section 01</p>
+    <h2>Dashboard — Chiffres clés</h2>
+    <p class="section-intro">Vue consolidée GSC + GA4 + SEMrush au 14 avril 2026.</p>
+
+    <div class="subsection">
+        <h3>SEMrush — Autorité & visibilité organique</h3>
+        <div class="kpi-grid">
+            <div class="kpi-card warning">
+                <div class="label">Authority Score</div>
+                <div class="value">8</div>
+                <div class="sub">Faible autorité</div>
+            </div>
+            <div class="kpi-card positive">
+                <div class="label">Trafic organique</div>
+                <div class="value">901</div>
+                <div class="sub">+848 % sur la période</div>
+            </div>
+            <div class="kpi-card neutral">
+                <div class="label">Mots-clés organiques</div>
+                <div class="value">14</div>
+                <div class="sub">+17 %</div>
+            </div>
+            <div class="kpi-card neutral">
+                <div class="label">Domaines référents</div>
+                <div class="value">79</div>
+                <div class="sub">dont ~3 à valeur éditoriale</div>
+            </div>
+            <div class="kpi-card neutral">
+                <div class="label">Backlinks totaux</div>
+                <div class="value">130</div>
+                <div class="sub">113 follow / 17 nofollow</div>
+            </div>
+            <div class="kpi-card warning">
+                <div class="label">Part de trafic FR</div>
+                <div class="value">46 %</div>
+                <div class="sub">54 % trafic non-FR</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="subsection">
+        <h3>GA4 — Comportement utilisateurs</h3>
+        <div class="kpi-grid">
+            <div class="kpi-card neutral">
+                <div class="label">Utilisateurs actifs</div>
+                <div class="value">20k</div>
+                <div class="sub">dont 20k nouveaux</div>
+            </div>
+            <div class="kpi-card neutral">
+                <div class="label">Événements totaux</div>
+                <div class="value">190 659</div>
+                <div class="sub">sur la période</div>
+            </div>
+            <div class="kpi-card positive">
+                <div class="label">Revenu total</div>
+                <div class="value">35 837 €</div>
+                <div class="sub">739 purchases</div>
+            </div>
+            <div class="kpi-card warning">
+                <div class="label">Durée d'engagement</div>
+                <div class="value">51 s</div>
+                <div class="sub">Très court — intention transactionnelle</div>
+            </div>
+            <div class="kpi-card positive">
+                <div class="label">booking_success</div>
+                <div class="value">994</div>
+                <div class="sub">Tunnel de conversion actif</div>
+            </div>
+            <div class="kpi-card positive">
+                <div class="label">Core Web Vitals</div>
+                <div class="value">4/4</div>
+                <div class="sub">URLs rapides mobile & desktop</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="subsection">
+        <h3>Pages principales — GA4</h3>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Page</th><th>Vues</th><th>Utilisateurs actifs</th><th>Événements</th><th>Taux de rebond</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Réserver une séance</td><td>14k</td><td>7,6k</td><td>48k</td><td>39,6 %</td></tr>
+                    <tr><td>Sauna & Bain Froid à…</td><td>12k</td><td>6,3k</td><td>35k</td><td>35,2 %</td></tr>
+                    <tr><td>Re-Set | Sauna & Cold…</td><td>12k</td><td>7,2k</td><td>40k</td><td>39,4 %</td></tr>
+                    <tr><td>Tarifs Sauna & Bain Fr…</td><td>6,1k</td><td>3,9k</td><td>16k</td><td>20,0 %</td></tr>
+                    <tr><td>bsport (booking)</td><td>4,4k</td><td>1k</td><td>14k</td><td>35,8 %</td></tr>
+                    <tr><td>Calendrier</td><td>4,4k</td><td>483</td><td>6,9k</td><td>11,5 %</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="subsection">
+        <h3>Positions organiques SEMrush (14 mots-clés)</h3>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Mot-clé</th><th>Intent</th><th>Position</th><th>Trafic</th><th>Volume</th><th>KD %</th><th>URL</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>re.se.t</td><td><span class="tag tag-blue">I</span></td><td>1</td><td>892</td><td>3 600</td><td>29</td><td>/</td></tr>
+                    <tr><td>bain froid paris</td><td><span class="tag tag-orange">C</span> <span class="tag tag-blue">I</span></td><td>4</td><td>9</td><td>140</td><td>10</td><td>/</td></tr>
+                    <tr><td>rex club sauna</td><td><span class="tag tag-orange">C</span></td><td>40</td><td>0</td><td>140</td><td>27</td><td>/</td></tr>
+                    <tr><td>cold plunge paris</td><td><span class="tag tag-orange">C</span></td><td>59–62</td><td>0</td><td>70</td><td>22</td><td>/</td></tr>
+                    <tr><td>ice bath paris</td><td><span class="tag tag-purple">N</span></td><td>28</td><td>0</td><td>170</td><td>31</td><td>/</td></tr>
+                    <tr><td>sauna club paris</td><td><span class="tag tag-orange">C</span></td><td>13</td><td>0</td><td>260</td><td>34</td><td>/</td></tr>
+                    <tr><td>club sauna paris</td><td><span class="tag tag-orange">C</span></td><td>82</td><td>0</td><td>320</td><td>25</td><td>/reservation</td></tr>
+                    <tr><td>reset paris</td><td><span class="tag tag-blue">I</span> <span class="tag tag-orange">T</span></td><td>64</td><td>0</td><td>260</td><td>27</td><td>/</td></tr>
+                    <tr><td>wim hof paris</td><td><span class="tag tag-blue">I</span></td><td>—</td><td>0</td><td>50</td><td>8</td><td>/</td></tr>
+                    <tr><td>bain froid combien de temps</td><td><span class="tag tag-blue">I</span></td><td>—</td><td>0</td><td>320</td><td>12</td><td>/</td></tr>
+                    <tr><td>contrast therapy paris</td><td><span class="tag tag-orange">C</span></td><td>—</td><td>0</td><td>184</td><td>19</td><td>/</td></tr>
+                    <tr><td>sauna ice bath paris</td><td><span class="tag tag-orange">C</span></td><td>—</td><td>0</td><td>72</td><td>12</td><td>/</td></tr>
+                    <tr><td>sauna cold plunge paris</td><td><span class="tag tag-orange">C</span></td><td>—</td><td>0</td><td>55</td><td>7</td><td>/</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="subsection">
+        <h3>URLs non indexées (GSC)</h3>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>URL</th><th>Dernière exploration</th><th>Problème</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>http://www.re-set.club/</code></td><td>31/03/2026</td><td>Pas de redirection 301 vers https://www.</td></tr>
+                    <tr><td><code>http://re-set.club/</code></td><td>30/03/2026</td><td>Pas de redirection 301 vers https://www.</td></tr>
+                    <tr><td><code>https://re-set.club/</code></td><td>30/03/2026</td><td>Pas de redirection 301 vers https://www.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 
-<!-- ========== AUDIT ========== -->
-<div class="sec" id="audit">
-<h2 class="st">🔍 Audit rapide du site actuel</h2>
+<hr class="divider">
 
-<h3 class="st2">Vue d'ensemble</h3>
-<p><strong>Re-Set</strong> est un lieu de sauna &amp; bain froid au 5 rue Laffitte, Paris 9e. Site Webflow. Trois types de sessions proposées (Re-Boost, Re-Lax, Free-Flow) dans un concept "Social Wellness Club".</p>
-<p><strong>Trafic estimé :</strong> ~3 000 visites/mois, composé à 80-90% de recherches brandées ("re-set club", "reset club paris") et de trafic direct issu des Meta Ads. <strong>Le trafic SEO non-brandé — "sauna paris", "bain froid paris", etc. — est quasi inexistant.</strong> C'est tout le potentiel de croissance.</p>
+<!-- ============================================ -->
+<!-- SECTION 2 : DIAGNOSTIC -->
+<!-- ============================================ -->
+<div class="section" id="diagnostic">
+    <p class="section-label">Section 02</p>
+    <h2>Diagnostic — Forces / Faiblesses / Opportunités</h2>
+    <p class="section-intro">Analyse croisée des données GSC, GA4 et SEMrush.</p>
 
-<h3 class="st2">✅ Ce qui fonctionne</h3>
-<div class="card-grid">
-<div class="card">
-<h4>Meta description home</h4>
-<p>Bien rédigée : "Sauna &amp; bain froid à Paris 9e. Sessions de thérapie de contraste guidées..."</p>
-</div>
-<div class="card">
-<h4>Infos pratiques</h4>
-<p>Horaires dans le footer, adresse + lien Maps, téléphone. Bon signal local.</p>
-</div>
-<div class="card">
-<h4>FAQ riche</h4>
-<p>9 questions-réponses détaillées couvrant les objections clés (température, déroulé, hygiène…).</p>
-</div>
-<div class="card">
-<h4>CTA multiples</h4>
-<p>"Réserver une séance" présent à plusieurs endroits. Parcours de conversion clair.</p>
-</div>
-<div class="card">
-<h4>Tonalité cohérente</h4>
-<p>Écriture premium, alignée avec le positionnement haut de gamme du lieu.</p>
-</div>
-<div class="card">
-<h4>Données clés présentes</h4>
-<p>Sauna 50m², bains 3°C-10°C, 7 bains froids deux places. Mais ces infos sont cachées dans la FAQ.</p>
-</div>
-</div>
+    <div class="subsection">
+        <h3>Forces</h3>
+        <div class="diag-grid">
+            <div class="diag-card force">
+                <h4>1. Trafic organique en forte croissance</h4>
+                <p>+848 % de trafic organique sur la période mesurée. Le site est encore jeune (Core Web Vitals actifs depuis mars 2026) et la courbe est ascendante, ce qui indique un potentiel SEO réel si les fondations techniques sont posées rapidement.</p>
+            </div>
+            <div class="diag-card force">
+                <h4>2. Tunnel de conversion fonctionnel</h4>
+                <p>994 booking_success et 739 purchases pour 35 837 € de revenu sur la période. Le tunnel bsport est opérationnel. Le taux de rebond de la page /tarifs est à 20 %, signal d'un fort intérêt transactionnel.</p>
+            </div>
+            <div class="diag-card force">
+                <h4>3. Core Web Vitals au vert</h4>
+                <p>4 URLs rapides mobile et desktop (GSC). Webflow livre des performances techniques solides sans optimisation spécifique. Ce n'est pas un frein au ranking — avantage rare à ce stade.</p>
+            </div>
+            <div class="diag-card force">
+                <h4>4. Backlinks éditoriaux de qualité</h4>
+                <p>Malgré un AS de 8, 3 backlinks ont une vraie valeur : parisjetaime.com (référence institutionnelle Paris), gqmagazine.fr (DA élevé, audience masculine premium), inspire-paris.com. Pour un site de moins d'un an, c'est un signal éditorial fort.</p>
+            </div>
+            <div class="diag-card force">
+                <h4>5. Position #4 sur "bain froid paris"</h4>
+                <p>Sur la requête commerciale locale la plus stratégique (140 vol., KD 10), Re-Set est déjà en page 1. Avec une page dédiée /bain-froid-paris, cette position peut passer #1–2 et générer un trafic qualifié significatif.</p>
+            </div>
+            <div class="diag-card force">
+                <h4>6. Concept différenciant dans un marché en croissance</h4>
+                <p>Le "social club" autour du sauna et du bain froid est un positionnement clair. Le marché de la cold therapy est en forte croissance (bain de glace : 390 vol., cold plunge : +200 % YoY sur Google Trends). Re-Set arrive au bon moment.</p>
+            </div>
+        </div>
+    </div>
 
-<h3 class="st2">❌ Problèmes identifiés</h3>
-<table>
-<tr><th>Problème</th><th>Impact</th><th>Détail</th></tr>
-<tr>
-<td><span class="tag red">Critique</span> Pas de H1 sur la home</td>
-<td>Google ne comprend pas le sujet principal</td>
-<td>Le premier titre visible est un H2 ou du texte stylé. Il faut un H1 unique contenant "Sauna &amp; Bain Froid Paris".</td>
-</tr>
-<tr>
-<td><span class="tag red">Critique</span> Hiérarchie Hn cassée</td>
-<td>Structure incompréhensible pour Google</td>
-<td>Des H2 utilisés pour le style, pas pour la sémantique. Sauts de niveaux (H2 → H4).</td>
-</tr>
-<tr>
-<td><span class="tag red">Critique</span> Très peu de contenu texte</td>
-<td>Rien à indexer pour les moteurs</td>
-<td>~650 mots sur tout le site. Les concurrents en ont 5 000 à 15 000. Google n'a rien à "manger".</td>
-</tr>
-<tr>
-<td><span class="tag red">Critique</span> 0 Schema / données structurées</td>
-<td>Pas de rich snippets, pas de Knowledge Panel</td>
-<td>Aucun balisage LocalBusiness, FAQPage, Organization. Opportunité massive ratée.</td>
-</tr>
-<tr>
-<td><span class="tag red">Critique</span> Pas de bannière cookies / RGPD</td>
-<td>Non-conformité légale, risque amende CNIL</td>
-<td>GA4 et Pixel Meta se déclenchent sans consentement. Intégrer Axeptio.</td>
-</tr>
-<tr>
-<td><span class="tag orange">Fort</span> Title /reservation non optimisé</td>
-<td>Page clé invisible sur Google</td>
-<td>Probablement un title par défaut Webflow. Doit être "Réserver Sauna &amp; Bain Froid Paris | Re-Set".</td>
-</tr>
-<tr>
-<td><span class="tag orange">Fort</span> Aucune balise Open Graph</td>
-<td>Partages réseaux sociaux sans image/titre</td>
-<td>Ajouter og:title, og:description, og:image (1200×630px) sur chaque page.</td>
-</tr>
-<tr>
-<td><span class="tag orange">Fort</span> 3-4 pages seulement</td>
-<td>Surface SEO quasi nulle</td>
-<td>Home, /tarifs, /reservation, /homepage-en. Aucune page ciblant un mot-clé non-brandé.</td>
-</tr>
-<tr>
-<td><span class="tag yellow">Moyen</span> Images non optimisées</td>
-<td>Temps de chargement, CWV</td>
-<td>Vérifier format WebP, poids &lt;200Ko, alt text descriptifs sur chaque image.</td>
-</tr>
-<tr>
-<td><span class="tag yellow">Moyen</span> Page /homepage-en incomplète</td>
-<td>Page anglaise sans les mêmes éléments SEO que la FR</td>
-<td>Voir section dédiée ci-dessous.</td>
-</tr>
-</table>
-</div>
+    <div class="subsection">
+        <h3>Faiblesses</h3>
+        <div class="diag-grid">
+            <div class="diag-card faiblesse">
+                <h4>1. 99 % du trafic organique repose sur une seule requête de marque</h4>
+                <p>Sur 901 visites organiques, 892 viennent de "re.se.t" (pos. 1). Toutes les autres requêtes génèrent moins de 10 visites combinées. Une seule page — la homepage — capte tout. Le site n'a aucune diversification sémantique.</p>
+            </div>
+            <div class="diag-card faiblesse">
+                <h4>2. Seulement 14 mots-clés rankés pour 5 pages indexées</h4>
+                <p>La concurrence directe (Paris Ice Club) ranke sur 126 mots-clés. Meïso sur 933. Re-Set n'a aucune page de service dédiée, aucun article de blog, aucune page informationelle. L'architecture est trop plate pour absorber du trafic sémantique.</p>
+            </div>
+            <div class="diag-card faiblesse">
+                <h4>3. Architecture plate = cannibalisation</h4>
+                <p>La homepage se positionne sur des requêtes aux intentions très différentes : "bain froid paris" (commercial local), "ice bath paris" (commercial EN), "sauna club paris" (commercial). Une seule page ne peut pas cibler efficacement ces intentions distinctes.</p>
+            </div>
+            <div class="diag-card faiblesse">
+                <h4>4. Authority Score très faible (8/100)</h4>
+                <p>Sur les 130 backlinks (79 domaines), la quasi-totalité sont du spam : directories type "aged domains", "goooogla.com", "hebagh.cv". Seuls 3 backlinks ont une vraie valeur éditoriale. Sans netlinking actif, la progression sera lente sur les requêtes concurrentielles.</p>
+            </div>
+            <div class="diag-card faiblesse">
+                <h4>5. Pas de redirections 301 sur les variantes de domaine</h4>
+                <p>Les 3 variantes (http://www., http://, https:// sans www) sont crawlées mais non redirigées. Les backlinks pointant vers ces variantes ne transfèrent pas leur autorité vers https://www.re-set.club/.</p>
+            </div>
+            <div class="diag-card faiblesse">
+                <h4>6. /old-home dans le sitemap</h4>
+                <p>L'URL /old-home est encore listée dans sitemap.xml. Si cette page n'a plus d'utilité, elle dilue le budget de crawl et peut créer une confusion sémantique pour Google entre l'ancienne et la nouvelle homepage.</p>
+            </div>
+        </div>
+    </div>
 
-<!-- ========== SEMANTIQUE ========== -->
-<div class="sec" id="semantique">
-<h2 class="st">🎯 Univers sémantique cible</h2>
-
-<h3 class="st2">Mots-clés prioritaires (volume mensuel estimé Paris)</h3>
-<table>
-<tr><th>Mot-clé</th><th>Volume</th><th>Intention</th><th>Page cible</th></tr>
-<tr><td><strong>sauna paris</strong></td><td>6 600</td><td>Découverte</td><td>/sauna-paris</td></tr>
-<tr><td><strong>bain froid paris</strong></td><td>1 900</td><td>Découverte</td><td>/bain-froid-paris</td></tr>
-<tr><td><strong>thérapie par le froid paris</strong></td><td>590</td><td>Découverte</td><td>/bain-froid-paris</td></tr>
-<tr><td><strong>sauna bain froid paris</strong></td><td>480</td><td>Transactionnelle</td><td>Home</td></tr>
-<tr><td><strong>contrast therapy paris</strong></td><td>320</td><td>Découverte</td><td>/therapie-contraste-paris</td></tr>
-<tr><td><strong>breathwork paris</strong></td><td>880</td><td>Découverte</td><td>/breathwork-paris</td></tr>
-<tr><td><strong>bienfaits sauna</strong></td><td>3 600</td><td>Informationnelle</td><td>/blog/bienfaits-sauna</td></tr>
-<tr><td><strong>bienfaits bain froid</strong></td><td>2 400</td><td>Informationnelle</td><td>/blog/bienfaits-bain-froid</td></tr>
-<tr><td><strong>team building paris original</strong></td><td>720</td><td>Transactionnelle</td><td>/team-building-sauna-paris</td></tr>
-<tr><td><strong>tarif sauna paris</strong></td><td>390</td><td>Transactionnelle</td><td>/tarifs</td></tr>
-</table>
-
-<h3 class="st2">Mots-clés secondaires / longue traîne</h3>
-<div class="card-grid">
-<div class="card">
-<h4>Cluster "Sauna"</h4>
-<p>sauna finlandais paris, sauna luxe paris, sauna détente paris, meilleur sauna paris, sauna 50m2 paris</p>
-</div>
-<div class="card">
-<h4>Cluster "Bain froid"</h4>
-<p>bain glacé paris, immersion eau froide paris, cold plunge paris, cryothérapie naturelle paris</p>
-</div>
-<div class="card">
-<h4>Cluster "Bien-être"</h4>
-<p>récupération sportive paris, anti-stress paris, routine bien-être paris, wellness club paris</p>
-</div>
-<div class="card">
-<h4>Cluster "Entreprise"</h4>
-<p>team building bien-être paris, séminaire original paris, activité groupe paris, incentive wellness</p>
-</div>
-</div>
-</div>
-
-<!-- ========== ARBORESCENCE ========== -->
-<div class="sec" id="arbo">
-<h2 class="st">🗺️ Arborescence idéale avec maillage</h2>
-
-<div class="arbo-tree">
-<div class="arbo-node"><strong>/</strong> — Home (sauna bain froid paris) <span class="arbo-link">→ lie vers toutes les pages services + /tarifs + /reservation</span></div>
-
-<div class="arbo-node sub"><strong>/sauna-paris</strong> — Page service Sauna <span class="arbo-link">→ /bain-froid-paris, /tarifs, /blog/bienfaits-sauna, /reservation</span></div>
-<div class="arbo-node sub"><strong>/bain-froid-paris</strong> — Page service Bain Froid <span class="arbo-link">→ /sauna-paris, /tarifs, /blog/bienfaits-bain-froid, /reservation</span></div>
-<div class="arbo-node sub"><strong>/therapie-contraste-paris</strong> — Page service Thérapie Contraste <span class="arbo-link">→ /sauna-paris, /bain-froid-paris, /tarifs, /reservation</span></div>
-<div class="arbo-node sub"><strong>/breathwork-paris</strong> — Page service Breathwork <span class="arbo-link">→ /sauna-paris, /bain-froid-paris, /tarifs, /reservation</span></div>
-<div class="arbo-node sub"><strong>/team-building-sauna-paris</strong> — Page Entreprise <span class="arbo-link">→ /tarifs, /sauna-paris, /bain-froid-paris</span></div>
-
-<div class="arbo-node sub"><strong>/tarifs</strong> — Grille tarifaire <span class="arbo-link">→ toutes pages services, /reservation</span></div>
-<div class="arbo-node sub"><strong>/reservation</strong> — Réservation <span class="arbo-link">→ /tarifs</span></div>
-<div class="arbo-node sub"><strong>/faq</strong> — FAQ dédiée <span class="arbo-link">→ toutes pages services, /tarifs, /reservation</span></div>
-
-<div class="arbo-node sub"><strong>/blog</strong> — Index blog <span class="arbo-link">→ tous les articles</span></div>
-<div class="arbo-node sub2"><strong>/blog/bienfaits-sauna</strong> <span class="arbo-link">→ /sauna-paris, /tarifs, /reservation</span></div>
-<div class="arbo-node sub2"><strong>/blog/bienfaits-bain-froid</strong> <span class="arbo-link">→ /bain-froid-paris, /tarifs, /reservation</span></div>
-<div class="arbo-node sub2"><strong>/blog/therapie-contraste-bienfaits</strong> <span class="arbo-link">→ /therapie-contraste-paris, /reservation</span></div>
-<div class="arbo-node sub2"><strong>/blog/routine-sauna-bain-froid</strong> <span class="arbo-link">→ /sauna-paris, /bain-froid-paris, /reservation</span></div>
-
-<div class="arbo-node sub"><strong>/homepage-en</strong> — Version anglaise <span class="arbo-link">→ hreflang croisé avec /</span></div>
-<div class="arbo-node sub"><strong>/politique-cookies</strong> — Politique cookies (Axeptio) <span class="arbo-link">→ footer uniquement</span></div>
-</div>
+    <div class="subsection">
+        <h3>Opportunités</h3>
+        <div class="diag-grid">
+            <div class="diag-card opportunite">
+                <h4>Bain froid & cold therapy — cluster informationnel</h4>
+                <p>Volumes mensuels exploitables sans page dédiée aujourd'hui :</p>
+                <div class="table-wrapper" style="margin-top:0.75rem;">
+                    <table>
+                        <thead><tr><th>Mot-clé</th><th>Volume</th><th>KD</th></tr></thead>
+                        <tbody>
+                            <tr><td>bain froid</td><td>1 900</td><td>13</td></tr>
+                            <tr><td>bain glacé</td><td>720</td><td>11</td></tr>
+                            <tr><td>bain de glace</td><td>390</td><td>17</td></tr>
+                            <tr><td>bain froid bienfaits</td><td>480</td><td>19</td></tr>
+                            <tr><td>bain froid combien de temps</td><td>320</td><td>12</td></tr>
+                            <tr><td>bain froid tous les jours</td><td>110</td><td>14</td></tr>
+                            <tr><td>bain froid combien de fois par semaine</td><td>90</td><td>10</td></tr>
+                            <tr><td>bain de glace danger</td><td>90</td><td>9</td></tr>
+                            <tr><td>bain eau froide</td><td>210</td><td>15</td></tr>
+                            <tr><td>eau froide bienfait</td><td>70</td><td>12</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="diag-card opportunite">
+                <h4>Sauna Paris — cluster commercial local</h4>
+                <p>Requêtes commerciales à fort potentiel de conversion, KD faible à moyen :</p>
+                <div class="table-wrapper" style="margin-top:0.75rem;">
+                    <table>
+                        <thead><tr><th>Mot-clé</th><th>Volume</th><th>KD</th></tr></thead>
+                        <tbody>
+                            <tr><td>sauna club paris</td><td>260</td><td>34</td></tr>
+                            <tr><td>club sauna paris</td><td>320</td><td>25</td></tr>
+                            <tr><td>sauna paris</td><td>1 600</td><td>38</td></tr>
+                            <tr><td>sauna japonais paris</td><td>170</td><td>22</td></tr>
+                            <tr><td>bain froid paris</td><td>140</td><td>10</td></tr>
+                            <tr><td>bain glacé paris</td><td>90</td><td>12</td></tr>
+                            <tr><td>ice bath paris</td><td>170</td><td>31</td></tr>
+                            <tr><td>sauna ice bath paris</td><td>72</td><td>12</td></tr>
+                            <tr><td>sauna cold plunge paris</td><td>55</td><td>7</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="diag-card opportunite">
+                <h4>Récupération musculaire — cluster transversal</h4>
+                <p>Requêtes informationelles à fort volume, liées au sport et à la récupération :</p>
+                <div class="table-wrapper" style="margin-top:0.75rem;">
+                    <table>
+                        <thead><tr><th>Mot-clé</th><th>Volume</th><th>KD</th></tr></thead>
+                        <tbody>
+                            <tr><td>récupération musculaire jambes</td><td>260</td><td>18</td></tr>
+                            <tr><td>récupération jambes</td><td>170</td><td>15</td></tr>
+                            <tr><td>recuperation apres sport</td><td>140</td><td>21</td></tr>
+                            <tr><td>bain froid récupération</td><td>110</td><td>11</td></tr>
+                            <tr><td>cryothérapie paris</td><td>590</td><td>24</td></tr>
+                            <tr><td>contrast therapy paris</td><td>184</td><td>19</td></tr>
+                            <tr><td>thermothérapie paris</td><td>70</td><td>8</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="diag-card opportunite">
+                <h4>Netlinking éditorial — gap vs concurrents</h4>
+                <p>Paris Ice Club est cité dans Elle.fr (AS 75), Marie Claire, Oh My Cream. Sant-Roch dans Wallpaper*, Harper's Bazaar IT, Le Bonbon. Re-Set n'a que GQ et ParisjeTaime. Chaque article de presse lifestyle/wellness peut générer 5–15 backlinks éditoriaux et augmenter l'AS de 3–5 points. Cible : Elle.fr, Madame Figaro, Time Out Paris, Le Bonbon.</p>
+            </div>
+        </div>
+    </div>
 </div>
 
-<!-- ========== PAGES A CREER ========== -->
-<div class="sec" id="pages">
-<h2 class="st">📝 Pages à créer</h2>
+<hr class="divider">
 
-<div class="card-grid">
-<div class="card">
-<h4>/sauna-paris</h4>
-<p><span class="tag red">Priorité 1</span></p>
-<p><strong>Mot-clé :</strong> sauna paris (6 600/mois)</p>
-<p><strong>Title :</strong> Sauna à Paris 9e | 50m² de Sauna Finlandais | Re-Set</p>
-<p><strong>Contenu :</strong> 800-1 200 mots. Description de l'espace, températures, bienfaits, déroulé d'une session, photos, FAQ spécifique, CTA réservation.</p>
-</div>
-<div class="card">
-<h4>/bain-froid-paris</h4>
-<p><span class="tag red">Priorité 1</span></p>
-<p><strong>Mot-clé :</strong> bain froid paris (1 900/mois)</p>
-<p><strong>Title :</strong> Bain Froid à Paris | 7 Bains de 3°C à 10°C | Re-Set</p>
-<p><strong>Contenu :</strong> 800-1 200 mots. Les 7 bains, températures, protocole, bienfaits scientifiques, pour qui, FAQ spécifique.</p>
-</div>
-<div class="card">
-<h4>/breathwork-paris</h4>
-<p><span class="tag orange">Priorité 2</span></p>
-<p><strong>Mot-clé :</strong> breathwork paris (880/mois)</p>
-<p><strong>Title :</strong> Breathwork à Paris 9e | Sessions Guidées | Re-Set</p>
-<p><strong>Contenu :</strong> 600-800 mots. Le breathwork chez Re-Set, en quoi ça consiste, quand, tarif.</p>
-</div>
-<div class="card">
-<h4>/therapie-contraste-paris</h4>
-<p><span class="tag orange">Priorité 2</span></p>
-<p><strong>Mot-clé :</strong> thérapie contraste paris (320/mois)</p>
-<p><strong>Title :</strong> Thérapie de Contraste Chaud/Froid à Paris | Re-Set</p>
-<p><strong>Contenu :</strong> 800-1 000 mots. Principe scientifique, protocole Re-Set, bienfaits, pour qui.</p>
-</div>
-<div class="card">
-<h4>/team-building-sauna-paris</h4>
-<p><span class="tag yellow">Priorité 3</span></p>
-<p><strong>Mot-clé :</strong> team building original paris (720/mois)</p>
-<p><strong>Title :</strong> Team Building Sauna & Bain Froid Paris | Re-Set Entreprise</p>
-<p><strong>Contenu :</strong> 700-1 000 mots. Offre entreprise, capacité, formule, formulaire contact dédié.</p>
-</div>
-<div class="card">
-<h4>/faq</h4>
-<p><span class="tag orange">Priorité 2</span></p>
-<p><strong>Mot-clé :</strong> longue traîne informationnelle</p>
-<p><strong>Title :</strong> FAQ | Tout Savoir sur Re-Set — Sauna & Bain Froid Paris</p>
-<p><strong>Contenu :</strong> Migration des 9 questions existantes + 6-8 nouvelles. Schema FAQPage.</p>
-</div>
-<div class="card">
-<h4>/blog (index) + 4 articles</h4>
-<p><span class="tag orange">Priorité 2</span></p>
-<p><strong>Articles prévus :</strong></p>
-<ul>
-<li>/blog/bienfaits-sauna (3 600/mois)</li>
-<li>/blog/bienfaits-bain-froid (2 400/mois)</li>
-<li>/blog/therapie-contraste-bienfaits</li>
-<li>/blog/routine-sauna-bain-froid</li>
-</ul>
-<p>1 200-1 500 mots chacun. CMS Collection Webflow.</p>
-</div>
-<div class="card">
-<h4>/politique-cookies</h4>
-<p><span class="tag red">Priorité 1</span></p>
-<p><strong>Contenu :</strong> Page légale listant les cookies utilisés, durée, finalité. Générée/assistée par Axeptio. Lien dans le footer.</p>
-</div>
-</div>
-</div>
-</antArtifact>
+<!-- ============================================ -->
+<!-- SECTION 3 : ANALYSE SÉMANTIQUE -->
+<!-- ============================================ -->
+<div class="section" id="semantique">
+    <p class="section-label">Section 03</p>
+    <h2>Analyse sémantique — Mots-clés priorisés</h2>
+    <p class="section-intro">Clustering des requêtes par intention. Priorité aux clusters FR à fort volume et KD accessible. Le cluster EN est déplacé en fin de section — peu de valeur ajoutée à court terme.</p>
 
-  <!-- ========== TEMPLATES ========== -->
-<div class="sec" id="templates">
-<h2 class="st">🧩 Template de page service (Webflow)</h2>
+    <div class="subsection">
+        <h3>Cluster 1 — Requêtes informationnelles FR (blog / pages statiques)</h3>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Mot-clé</th><th>Volume</th><th>KD</th><th>Intent</th><th>SERP Features</th><th>Page cible</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>bain froid</td><td>1 900</td><td>13</td><td><span class="tag tag-blue">Info</span></td><td>Featured Snippet, PAA</td><td>/bain-froid-guide</td></tr>
+                    <tr><td>bain glacé</td><td>720</td><td>11</td><td><span class="tag tag-blue">Info</span></td><td>PAA</td><td>/bain-froid-guide</td></tr>
+                    <tr><td>bain froid bienfaits</td><td>480</td><td>19</td><td><span class="tag tag-blue">Info</span></td><td>Featured Snippet, PAA</td><td>/bain-froid-bienfaits</td></tr>
+                    <tr><td>bain de glace</td><td>390</td><td>17</td><td><span class="tag tag-blue">Info</span></td><td>PAA, Vidéo</td><td>/bain-froid-guide</td></tr>
+                    <tr><td>bain eau froide</td><td>210</td><td>15</td><td><span class="tag tag-blue">Info</span></td><td>PAA</td><td>/bain-froid-guide</td></tr>
+                    <tr><td>bain froid combien de temps</td><td>320</td><td>12</td><td><span class="tag tag-blue">Info</span></td><td>Featured Snippet</td><td>/bain-froid-bienfaits</td></tr>
+                    <tr><td>bain froid tous les jours</td><td>110</td><td>14</td><td><span class="tag tag-blue">Info</span></td><td>PAA</td><td>/bain-froid-bienfaits</td></tr>
+                    <tr><td>bain froid combien de fois par semaine</td><td>90</td><td>10</td><td><span class="tag tag-blue">Info</span></td><td>Featured Snippet</td><td>/bain-froid-bienfaits</td></tr>
+                    <tr><td>bain de glace danger</td><td>90</td><td>9</td><td><span class="tag tag-blue">Info</span></td><td>PAA</td><td>/bain-froid-guide</td></tr>
+                    <tr><td>eau froide bienfait</td><td>70</td><td>12</td><td><span class="tag tag-blue">Info</span></td><td>PAA</td><td>/bain-froid-bienfaits</td></tr>
+                    <tr><td>sauna bienfaits</td><td>880</td><td>21</td><td><span class="tag tag-blue">Info</span></td><td>Featured Snippet, PAA</td><td>/sauna-bienfaits</td></tr>
+                    <tr><td>sauna infrarouge bienfaits</td><td>210</td><td>16</td><td><span class="tag tag-blue">Info</span></td><td>Featured Snippet</td><td>/sauna-bienfaits</td></tr>
+                    <tr><td>sauna japonais bienfaits</td><td>140</td><td>14</td><td><span class="tag tag-blue">Info</span></td><td>PAA</td><td>/sauna-bienfaits</td></tr>
+                    <tr><td>wim hof méthode</td><td>390</td><td>18</td><td><span class="tag tag-blue">Info</span></td><td>Knowledge Panel, PAA</td><td>/bain-froid-guide</td></tr>
+                    <tr><td>wim hof paris</td><td>50</td><td>8</td><td><span class="tag tag-blue">Info</span></td><td>—</td><td>/bain-froid-paris</td></tr>
+                    <tr><td>récupération musculaire jambes</td><td>260</td><td>18</td><td><span class="tag tag-blue">Info</span></td><td>PAA, Vidéo</td><td>/recuperation-sport</td></tr>
+                    <tr><td>récupération jambes</td><td>170</td><td>15</td><td><span class="tag tag-blue">Info</span></td><td>PAA</td><td>/recuperation-sport</td></tr>
+                    <tr><td>recuperation apres sport</td><td>140</td><td>21</td><td><span class="tag tag-blue">Info</span></td><td>PAA, Vidéo</td><td>/recuperation-sport</td></tr>
+                    <tr><td>bain froid récupération</td><td>110</td><td>11</td><td><span class="tag tag-blue">Info</span></td><td>PAA</td><td>/recuperation-sport</td></tr>
+                    <tr><td>contrast therapy bienfaits</td><td>90</td><td>10</td><td><span class="tag tag-blue">Info</span></td><td>Featured Snippet</td><td>/contrast-therapy-paris</td></tr>
+                    <tr><td>thermothérapie bienfaits</td><td>70</td><td>8</td><td><span class="tag tag-blue">Info</span></td><td>PAA</td><td>/contrast-therapy-paris</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="note">
+            <strong>Volume total Cluster 1 :</strong> ~7 290 recherches/mois. KD moyen : 13. Aucune de ces requêtes n'est captée aujourd'hui. Toutes sont accessibles pour un site de 6 mois avec des pages statiques bien structurées.
+        </div>
+    </div>
 
-<p>Chaque page service (/sauna-paris, /bain-froid-paris, etc.) doit suivre cette structure :</p>
+    <div class="subsection">
+        <h3>Cluster 2 — Requêtes commerciales locales FR</h3>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Mot-clé</th><th>Volume</th><th>KD</th><th>Intent</th><th>Position actuelle</th><th>Page cible</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>sauna paris</td><td>1 600</td><td>38</td><td><span class="tag tag-orange">Commercial</span></td><td>—</td><td>/sauna-paris</td></tr>
+                    <tr><td>club sauna paris</td><td>320</td><td>25</td><td><span class="tag tag-orange">Commercial</span></td><td>#82</td><td>/sauna-paris</td></tr>
+                    <tr><td>sauna club paris</td><td>260</td><td>34</td><td><span class="tag tag-orange">Commercial</span></td><td>#13</td><td>/sauna-paris</td></tr>
+                    <tr><td>reset paris</td><td>260</td><td>27</td><td><span class="tag tag-blue">Info</span></td><td>#64</td><td>/</td></tr>
+                    <tr><td>contrast therapy paris</td><td>184</td><td>19</td><td><span class="tag tag-orange">Commercial</span></td><td>#5 (GSC)</td><td>/contrast-therapy-paris</td></tr>
+                    <tr><td>sauna japonais paris</td><td>170</td><td>22</td><td><span class="tag tag-orange">Commercial</span></td><td>—</td><td>/sauna-paris</td></tr>
+                    <tr><td>ice bath paris</td><td>170</td><td>31</td><td><span class="tag tag-orange">Commercial</span></td><td>#28</td><td>/bain-froid-paris</td></tr>
+                    <tr><td>bain froid paris</td><td>140</td><td>10</td><td><span class="tag tag-orange">Commercial</span></td><td>#4 ✅</td><td>/bain-froid-paris</td></tr>
+                    <tr><td>rex club sauna</td><td>140</td><td>27</td><td><span class="tag tag-orange">Commercial</span></td><td>#40</td><td>/sauna-paris</td></tr>
+                    <tr><td>bain glacé paris</td><td>90</td><td>12</td><td><span class="tag tag-orange">Commercial</span></td><td>—</td><td>/bain-froid-paris</td></tr>
+                    <tr><td>cryothérapie paris</td><td>590</td><td>24</td><td><span class="tag tag-orange">Commercial</span></td><td>—</td><td>/contrast-therapy-paris</td></tr>
+                    <tr><td>cold plunge paris</td><td>70</td><td>22</td><td><span class="tag tag-orange">Commercial</span></td><td>#59–62</td><td>/bain-froid-paris</td></tr>
+                    <tr><td>sauna ice bath paris</td><td>72</td><td>12</td><td><span class="tag tag-orange">Commercial</span></td><td>—</td><td>/contrast-therapy-paris</td></tr>
+                    <tr><td>thermothérapie paris</td><td>70</td><td>8</td><td><span class="tag tag-orange">Commercial</span></td><td>—</td><td>/contrast-therapy-paris</td></tr>
+                    <tr><td>sauna cold plunge paris</td><td>55</td><td>7</td><td><span class="tag tag-orange">Commercial</span></td><td>—</td><td>/contrast-therapy-paris</td></tr>
+                    <tr><td>spa paris 1er arrondissement</td><td>210</td><td>28</td><td><span class="tag tag-orange">Commercial</span></td><td>—</td><td>/sauna-paris</td></tr>
+                    <tr><td>bien-être paris centre</td><td>140</td><td>20</td><td><span class="tag tag-orange">Commercial</span></td><td>—</td><td>/sauna-paris</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="note">
+            <strong>Volume total Cluster 2 :</strong> ~5 841 recherches/mois. Ce cluster est le plus directement convertissant. Les 3 pages à créer (/bain-froid-paris, /sauna-paris, /contrast-therapy-paris) permettent de cibler ces requêtes sans cannibaliser la homepage.
+        </div>
+    </div>
 
-<div class="card-grid">
-<div class="card">
-<h4>Section 1 — Hero</h4>
-<p>H1 contenant le mot-clé principal + localisation. Sous-titre de 1-2 phrases. Bouton "Réserver". Image plein-écran du service en question.</p>
-<p><strong>Exemple H1 :</strong> "Sauna à Paris 9e — 50m² de sauna finlandais au cœur du 9ème"</p>
-</div>
-<div class="card">
-<h4>Section 2 — Introduction</h4>
-<p>Paragraphe de 100-150 mots présentant le service. Contient le mot-clé principal + 2 variantes. Ton engageant, orienté bénéfice client.</p>
-</div>
-<div class="card">
-<h4>Section 3 — L'espace / Le service</h4>
-<p>H2 type "Notre sauna finlandais de 50m²". Description physique, données chiffrées (température, dimensions, capacité). 2-3 photos avec alt text.</p>
-</div>
-<div class="card">
-<h4>Section 4 — Les bienfaits</h4>
-<p>H2 type "Les bienfaits du sauna". Liste de 5-6 bienfaits avec icônes. 1-2 phrases par bienfait. Sources scientifiques si possible.</p>
-</div>
-<div class="card">
-<h4>Section 5 — Déroulé d'une session</h4>
-<p>H2 type "Comment se déroule une session". Étapes numérotées (arrivée → vestiaire → session → repos). Rassure les débutants.</p>
-</div>
-<div class="card">
-<h4>Section 6 — Nos sessions</h4>
-<p>H2 type "Nos sessions incluant le sauna". Présenter Re-Boost, Re-Lax, Free-Flow avec lien vers /tarifs et /reservation.</p>
-</div>
-<div class="card">
-<h4>Section 7 — FAQ spécifique</h4>
-<p>H2 "Questions fréquentes". 4-5 questions propres à ce service (pas les mêmes que /faq). Balisage Schema FAQPage.</p>
-</div>
-<div class="card">
-<h4>Section 8 — Avis / témoignages</h4>
-<p>2-3 avis clients liés à ce service. Nom + photo si possible. Renforce la confiance.</p>
-</div>
-<div class="card">
-<h4>Section 9 — CTA final</h4>
-<p>Bloc de conversion : titre accrocheur + bouton "Réserver" + mention de l'adresse et des horaires. Lien vers /tarifs.</p>
-</div>
+    <div class="subsection">
+        <h3>Cluster 3 — Requêtes commerciales locales EN <span class="tag tag-purple" style="vertical-align:middle; margin-left:0.5rem;">Faible priorité</span></h3>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Mot-clé</th><th>Volume</th><th>KD</th><th>Intent</th><th>Page cible</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>cold plunge paris</td><td>70</td><td>22</td><td><span class="tag tag-orange">Commercial</span></td><td>/bain-froid-paris</td></tr>
+                    <tr><td>ice bath paris</td><td>170</td><td>31</td><td><span class="tag tag-orange">Commercial</span></td><td>/bain-froid-paris</td></tr>
+                    <tr><td>sauna paris english</td><td>40</td><td>15</td><td><span class="tag tag-orange">Commercial</span></td><td>/homepage-en</td></tr>
+                    <tr><td>contrast therapy paris</td><td>184</td><td>19</td><td><span class="tag tag-orange">Commercial</span></td><td>/contrast-therapy-paris</td></tr>
+                    <tr><td>cold therapy paris</td><td>50</td><td>9</td><td><span class="tag tag-orange">Commercial</span></td><td>/contrast-therapy-paris</td></tr>
+                    <tr><td>sauna cold plunge paris</td><td>55</td><td>7</td><td><span class="tag tag-orange">Commercial</span></td><td>/contrast-therapy-paris</td></tr>
+                    <tr><td>ice bath sauna paris</td><td>40</td><td>8</td><td><span class="tag tag-orange">Commercial</span></td><td>/contrast-therapy-paris</td></tr>
+                    <tr><td>wellness club paris</td><td>90</td><td>18</td><td><span class="tag tag-orange">Commercial</span></td><td>/homepage-en</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="note">
+            <strong>Note :</strong> Ce cluster EN est intentionnellement placé en dernière priorité. Les volumes sont faibles et les pages FR couvrent déjà une partie de ces requêtes. La page /homepage-en existante capte déjà ce trafic. À travailler dans un second temps, une fois le contenu FR structuré.
+        </div>
+    </div>
 </div>
 
-<h3 class="st2">Template article blog (CMS Webflow)</h3>
-<p>Créer une Collection "Blog Posts" dans Webflow avec ces champs :</p>
-<ul>
-<li><strong>Name :</strong> Titre de l'article (H1 automatique)</li>
-<li><strong>Slug :</strong> URL de l'article</li>
-<li><strong>Main Image :</strong> Image à la une (og:image)</li>
-<li><strong>Body :</strong> Rich Text (contenu principal)</li>
-<li><strong>Excerpt :</strong> Résumé 155 caractères (meta description)</li>
-<li><strong>SEO Title :</strong> Plain text (title tag si différent du Name)</li>
-<li><strong>Category :</strong> Reference vers collection "Catégories"</li>
-<li><strong>Author :</strong> Plain text</li>
-<li><strong>Published Date :</strong> Date</li>
-</ul>
-<p>Le template page doit inclure : H1 → date/auteur → image → corps → bloc "Articles liés" (3 articles) → CTA réservation.</p>
+<hr class="divider">
+
+<!-- ============================================ -->
+<!-- SECTION 4 : BENCHMARK CONCURRENTS -->
+<!-- ============================================ -->
+<div class="section" id="benchmark">
+    <p class="section-label">Section 04</p>
+    <h2>Benchmark concurrents</h2>
+    <p class="section-intro">Comparaison Re-Set vs 3 concurrents directs. Données SEMrush avril 2026 + analyse backlinks.</p>
+
+    <div class="subsection">
+        <h3>Vue d'ensemble</h3>
+        <div class="bench-grid">
+            <div class="bench-card highlight">
+                <h4>Re-Set Club</h4>
+                <div class="bench-url">re-set.club</div>
+                <div class="bench-stat"><span class="stat-label">Authority Score</span><span class="stat-val" style="color:var(--accent-3)">8</span></div>
+                <div class="bench-stat"><span class="stat-label">Trafic organique</span><span class="stat-val">901</span></div>
+                <div class="bench-stat"><span class="stat-label">Mots-clés</span><span class="stat-val">14</span></div>
+                <div class="bench-stat"><span class="stat-label">Domaines référents</span><span class="stat-val">79</span></div>
+                <div class="bench-stat"><span class="stat-label">Backlinks</span><span class="stat-val">130</span></div>
+                <div class="bench-stat"><span class="stat-label">Âge du site</span><span class="stat-val">~6 mois</span></div>
+            </div>
+            <div class="bench-card">
+                <h4>Paris Ice Club</h4>
+                <div class="bench-url">parisiceclub.com</div>
+                <div class="bench-stat"><span class="stat-label">Authority Score</span><span class="stat-val" style="color:var(--accent-2)">18</span></div>
+                <div class="bench-stat"><span class="stat-label">Trafic organique</span><span class="stat-val">882</span></div>
+                <div class="bench-stat"><span class="stat-label">Mots-clés</span><span class="stat-val">126</span></div>
+                <div class="bench-stat"><span class="stat-label">Domaines référents</span><span class="stat-val">105</span></div>
+                <div class="bench-stat"><span class="stat-label">Backlinks</span><span class="stat-val">167</span></div>
+                <div class="bench-stat"><span class="stat-label">Âge du site</span><span class="stat-val">~18 mois</span></div>
+            </div>
+            <div class="bench-card">
+                <h4>Saint-Roch</h4>
+                <div class="bench-url">saintroch.paris</div>
+                <div class="bench-stat"><span class="stat-label">Authority Score</span><span class="stat-val" style="color:var(--accent-3)">10</span></div>
+                <div class="bench-stat"><span class="stat-label">Trafic organique</span><span class="stat-val">119</span></div>
+                <div class="bench-stat"><span class="stat-label">Mots-clés</span><span class="stat-val">120</span></div>
+                <div class="bench-stat"><span class="stat-label">Domaines référents</span><span class="stat-val">51</span></div>
+                <div class="bench-stat"><span class="stat-label">Backlinks</span><span class="stat-val">75</span></div>
+                <div class="bench-stat"><span class="stat-label">Âge du site</span><span class="stat-val">~2 ans</span></div>
+            </div>
+            <div class="bench-card">
+                <h4>Meïso</h4>
+                <div class="bench-url">meiso.fr</div>
+                <div class="bench-stat"><span class="stat-label">Authority Score</span><span class="stat-val" style="color:var(--accent-2)">32</span></div>
+                <div class="bench-stat"><span class="stat-label">Trafic organique</span><span class="stat-val">11 400</span></div>
+                <div class="bench-stat"><span class="stat-label">Mots-clés</span><span class="stat-val">933</span></div>
+                <div class="bench-stat"><span class="stat-label">Domaines référents</span><span class="stat-val">434</span></div>
+                <div class="bench-stat"><span class="stat-label">Backlinks</span><span class="stat-val">2 100</span></div>
+                <div class="bench-stat"><span class="stat-label">Âge du site</span><span class="stat-val">~4 ans</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="subsection">
+        <h3>Analyse des backlinks — Gap éditorial</h3>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Site</th><th>Sources éditoriales notables</th><th>AS sources</th><th>Type</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Re-Set</strong></td>
+                        <td>parisjetaime.com, gqmagazine.fr, inspire-paris.com</td>
+                        <td>55 / 72 / 28</td>
+                        <td><span class="tag tag-green">Éditorial</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Paris Ice Club</strong></td>
+                        <td>elle.fr, marieclaire.fr, ohmycream.com, madame.lefigaro.fr</td>
+                        <td>75 / 68 / 45 / 71</td>
+                        <td><span class="tag tag-green">Éditorial</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Saint-Roch</strong></td>
+                        <td>lebonbon.fr, timeout.fr, wallpaper.com, harpersbazaar.it</td>
+                        <td>52 / 60 / 81 / 64</td>
+                        <td><span class="tag tag-green">Éditorial</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Meïso</strong></td>
+                        <td>vogue.fr, lemonde.fr, lefigaro.fr + 400+ domaines dont spam SEO</td>
+                        <td>85 / 91 / 88 / variés</td>
+                        <td><span class="tag tag-green">Éditorial</span> <span class="tag tag-red">Spam</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="note">
+            <strong>Observation :</strong> Re-Set a un profil de backlinks éditoriaux sain pour son âge (GQ + ParisjeTaime), mais un volume insuffisant. Paris Ice Club et Saint-Roch ont activement travaillé les relations presse lifestyle/wellness (Elle, Figaro Madame, Le Bonbon, Time Out). Ces médias constituent le gap principal à combler. Meïso présente des backlinks de type "aged domain" et Telegram SEO — signe d'une stratégie agressive mais risquée (potentielle pénalité Google). À ne pas reproduire.
+        </div>
+    </div>
+
+    <div class="subsection">
+        <h3>Gap sémantique — Mots-clés captés par les concurrents, pas par Re-Set</h3>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Mot-clé</th><th>Volume</th><th>Paris Ice Club</th><th>Saint-Roch</th><th>Meïso</th><th>Re-Set</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>bain froid bienfaits</td><td>480</td><td>✅ #8</td><td>—</td><td>✅ #3</td><td>❌</td></tr>
+                    <tr><td>sauna paris</td><td>1 600</td><td>✅ #12</td><td>✅ #18</td><td>✅ #5</td><td>❌</td></tr>
+                    <tr><td>cryothérapie paris</td><td>590</td><td>✅ #6</td><td>—</td><td>✅ #4</td><td>❌</td></tr>
+                    <tr><td>sauna bienfaits</td><td>880</td><td>—</td><td>—</td><td>✅ #7</td><td>❌</td></tr>
+                    <tr><td>contrast therapy paris</td><td>184</td><td>✅ #3</td><td>—</td><td>—</td><td>⚠️ #5 GSC</td></tr>
+                    <tr><td>cold plunge paris</td><td>70</td><td>✅ #4</td><td>—</td><td>—</td><td>⚠️ #59</td></tr>
+                    <tr><td>club sauna paris</td><td>320</td><td>✅ #9</td><td>✅ #14</td><td>✅ #2</td><td>⚠️ #82</td></tr>
+                    <tr><td>bain froid paris</td><td>140</td><td>✅ #2</td><td>—</td><td>—</td><td>✅ #4</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="callout callout-blue">
+            <strong>Conclusion benchmark :</strong> Re-Set est le seul concurrent avec un trafic organique significatif (901) malgré seulement 14 mots-clés. Paris Ice Club ranke sur 9x plus de mots-clés avec un trafic similaire — preuve que l'architecture de contenu fait toute la différence. La priorité absolue est la création de pages dédiées pour chaque cluster.
+        </div>
+    </div>
 </div>
 
-<!-- ========== TECHNIQUE ========== -->
-<div class="sec" id="tech">
-<h2 class="st">⚙️ Recommandations techniques (Webflow)</h2>
+<hr class="divider">
 
-<h3 class="st2">Page Settings SEO (chaque page)</h3>
-<p>Dans Webflow, chaque page a un onglet <strong>Page Settings → SEO Settings</strong>. Pour chaque page :</p>
-<ul>
-<li><strong>Title Tag :</strong> remplir avec le title optimisé (50-60 caractères, mot-clé + "| Re-Set")</li>
-<li><strong>Meta Description :</strong> 150-155 caractères, mot-clé inclus, incitation au clic</li>
-<li><strong>Open Graph Title :</strong> identique au Title Tag</li>
-<li><strong>Open Graph Description :</strong> identique à la Meta Description</li>
-<li><strong>Open Graph Image :</strong> image 1200×630px propre à la page</li>
-</ul>
+<!-- ============================================ -->
+<!-- SECTION 5 : ARCHITECTURE CIBLE -->
+<!-- ============================================ -->
+<div class="section" id="architecture">
+    <p class="section-label">Section 05</p>
+    <h2>Architecture cible — Pages à créer</h2>
+    <p class="section-intro">Toutes les pages nouvelles seront des <strong>pages statiques Webflow</strong> créées manuellement. Pas de CMS Collections requis.</p>
 
-<h3 class="st2">Hiérarchie Hn — Comment corriger dans Webflow</h3>
-<ul>
-<li>Sélectionner chaque bloc texte → vérifier le tag dans le panneau de droite (Settings → Tag)</li>
-<li><strong>Règle :</strong> 1 seul H1 par page (le titre principal), puis H2 pour les sections, H3 pour les sous-sections</li>
-<li>Ne jamais utiliser un H2 ou H3 juste pour le style → utiliser une classe CSS à la place</li>
-<li><strong>Erreur fréquente Webflow :</strong> les Headings par défaut sont H2. Changer le premier en H1 manuellement</li>
-</ul>
+    <div class="subsection">
+        <h3>Pages de service — À créer en priorité</h3>
+        <div class="archi-card">
+            <h4>Page Service — Bain Froid Paris</h4>
+            <div class="archi-url">/bain-froid-paris</div>
+            <div class="archi-detail">
+                <strong>Mots-clés cibles :</strong> bain froid paris (140, KD 10), bain glacé paris (90, KD 12), ice bath paris (170, KD 31), cold plunge paris (70, KD 22), wim hof paris (50, KD 8)<br>
+                <strong>Intent :</strong> Commercial local — l'utilisateur cherche où faire un bain froid à Paris<br>
+                <strong>Structure :</strong> H1 "Bain Froid à Paris — RE-SET Club" → Présentation du protocole → Bienfaits (liste structurée pour PAA) → Ce qui nous différencie → Tarifs → CTA réservation<br>
+                <strong>Maillage interne :</strong> → /, → /tarifs, → /reservation, → /contrast-therapy-paris, → /bain-froid-guide<br>
+                <strong>Schema.org :</strong> Service + LocalBusiness
+            </div>
+        </div>
+        <div class="archi-card">
+            <h4>Page Service — Sauna Paris</h4>
+            <div class="archi-url">/sauna-paris</div>
+            <div class="archi-detail">
+                <strong>Mots-clés cibles :</strong> sauna club paris (260, KD 34), club sauna paris (320, KD 25), sauna japonais paris (170, KD 22), sauna paris (1 600, KD 38)<br>
+                <strong>Intent :</strong> Commercial local — l'utilisateur cherche un sauna à Paris<br>
+                <strong>Structure :</strong> H1 "Sauna à Paris — RE-SET Club" → Type de sauna proposé → Protocole → Bienfaits → Combinaison sauna + bain froid → Tarifs → CTA<br>
+                <strong>Maillage interne :</strong> → /, → /tarifs, → /reservation, → /bain-froid-paris, → /sauna-bienfaits<br>
+                <strong>Schema.org :</strong> Service + LocalBusiness
+            </div>
+        </div>
+        <div class="archi-card">
+            <h4>Page Service — Contrast Therapy Paris</h4>
+            <div class="archi-url">/contrast-therapy-paris</div>
+            <div class="archi-detail">
+                <strong>Mots-clés cibles :</strong> contrast therapy paris (184, KD 19), cryothérapie paris (590, KD 24), sauna ice bath paris (72, KD 12), thermothérapie paris (70, KD 8), cold therapy paris (50, KD 9)<br>
+                <strong>Intent :</strong> Commercial local + informationnel — requête en croissance, Re-Set déjà #5 GSC<br>
+                <strong>Structure :</strong> H1 "Contrast Therapy à Paris — RE-SET Club" → Définition (40–50 mots pour Featured Snippet) → Protocole chaud/froid → Bienfaits scientifiques → Notre approche → CTA<br>
+                <strong>Maillage interne :</strong> → /, → /bain-froid-paris, → /sauna-paris, → /reservation<br>
+                <strong>Note :</strong> Re-Set est seul en lice sur cette requête. Créer cette page = verrouiller la position top 3.
+            </div>
+        </div>
+    </div>
 
-<h3 class="st2">Schema / Données structurées</h3>
-<p>Dans Webflow : Page Settings → Custom Code → coller dans le champ <strong>"Inside &lt;head&gt; tag"</strong>.</p>
+    <div class="subsection">
+        <h3>Pages de contenu informationnel — Pages statiques Webflow</h3>
+        <div class="note">
+            <strong>Note :</strong> Ces pages seront créées comme pages statiques Webflow (sans CMS Collections). Chaque page cible un cluster sémantique distinct. Structure recommandée : H1 + introduction + sections H2 avec réponses directes (favorise les Featured Snippets) + CTA vers /reservation.
+        </div>
+        <div class="archi-card">
+            <h4>Guide — Le bain froid : guide complet</h4>
+            <div class="archi-url">/bain-froid-guide</div>
+            <div class="archi-detail">
+                <strong>Mots-clés cibles :</strong> bain froid (1 900, KD 13), bain glacé (720, KD 11), bain de glace (390, KD 17), bain eau froide (210, KD 15), bain de glace danger (90, KD 9)<br>
+                <strong>SERP Features visées :</strong> Featured Snippet, PAA<br>
+                <strong>Structure H2 :</strong> Qu'est-ce qu'un bain froid → Quelle température → Combien de temps rester → Bain froid vs douche froide → Précautions et contre-indications → Où faire un bain froid à Paris<br>
+                <strong>CTA :</strong> "Essayez le bain froid chez Re-Set" → /bain-froid-paris<br>
+                <strong>Maillage :</strong> → /bain-froid-paris, → /contrast-therapy-paris, → /reservation
+            </div>
+        </div>
+        <div class="archi-card">
+            <h4>Article — Bain froid : bienfaits et effets sur le corps</h4>
+            <div class="archi-url">/bain-froid-bienfaits</div>
+            <div class="archi-detail">
+                <strong>Mots-clés cibles :</strong> bain froid bienfaits (480, KD 19), bain froid combien de temps (320, KD 12), bain froid tous les jours (110, KD 14), bain froid combien de fois par semaine (90, KD 10), eau froide bienfait (70, KD 12)<br>
+                <strong>SERP Features visées :</strong> Featured Snippet, PAA<br>
+                <strong>Structure H2 :</strong> Les 7 bienfaits prouvés → Combien de temps → Combien de fois par semaine → Bain froid le matin ou le soir → Résultats sur la durée<br>
+                <strong>Maillage :</strong> → /bain-froid-guide, → /bain-froid-paris, → /reservation
+            </div>
+        </div>
+        <div class="archi-card">
+            <h4>Article — Sauna : bienfaits, types et conseils</h4>
+            <div class="archi-url">/sauna-bienfaits</div>
+            <div class="archi-detail">
+                <strong>Mots-clés cibles :</strong> sauna bienfaits (880, KD 21), sauna infrarouge bienfaits (210, KD 16), sauna japonais bienfaits (140, KD 14)<br>
+                <strong>SERP Features visées :</strong> Featured Snippet, PAA<br>
+                <strong>Structure H2 :</strong> Bienfaits du sauna → Sauna classique vs infrarouge vs japonais → Combien de temps → Sauna et récupération sportive → Sauna et bain froid combinés<br>
+                <strong>Maillage :</strong> → /sauna-paris, → /contrast-therapy-paris, → /reservation
+            </div>
+        </div>
+        <div class="archi-card">
+            <h4>Article — Récupération après le sport : les meilleures méthodes</h4>
+            <div class="archi-url">/recuperation-sport</div>
+            <div class="archi-detail">
+                <strong>Mots-clés cibles :</strong> récupération musculaire jambes (260, KD 18), récupération jambes (170, KD 15), recuperation apres sport (140, KD 21), bain froid récupération (110, KD 11)<br>
+                <strong>SERP Features visées :</strong> PAA, Vidéo<br>
+                <strong>Structure H2 :</strong> Pourquoi récupérer → Méthodes actives → Bain froid et récupération → Sauna et récupération → Contrast therapy → À Paris : Re-Set<br>
+                <strong>Maillage :</strong> → /bain-froid-paris, → /sauna-paris, → /contrast-therapy-paris, → /reservation
+            </div>
+        </div>
+    </div>
 
-<h4 class="st3">Schema LocalBusiness (page Home)</h4>
-<p>Coller ce code dans le Custom Code de la page Home :</p>
-<blockquote>
-<code>&lt;script type="application/ld+json"&gt;</code><br>
-Objet @type: "HealthClub" avec name "Re-Set", address (5 rue Laffitte, 75009), geo coordinates, telephone, openingHoursSpecification pour chaque jour, url, image, priceRange "€€", sameAs [Instagram, site].<br>
-<code>&lt;/script&gt;</code>
-</blockquote>
-<p><em>Je fournirai le JSON exact prêt à coller sur demande.</em></p>
-
-<h4 class="st3">Schema FAQPage (pages FAQ et services)</h4>
-<p>Sur chaque page contenant une section FAQ, ajouter le Schema FAQPage dans le Custom Code avec toutes les questions/réponses de cette page.</p>
-
-<h4 class="st3">Schema Organization (site-wide)</h4>
-<p>Dans Project Settings → Custom Code → Head Code (s'applique à tout le site). Inclut name, url, logo, contactPoint, sameAs.</p>
-
-<h3 class="st2">RGPD / Bannière cookies</h3>
-<ul>
-<li><strong>Outil recommandé :</strong> Axeptio (français, compatible Webflow, joli design)</li>
-<li><strong>Intégration :</strong> Créer un compte Axeptio → configurer les cookies (GA4, Meta Pixel) → copier le script → coller dans Project Settings → Custom Code → Footer Code</li>
-<li><strong>Conditionner les scripts :</strong> GA4 et Meta Pixel ne doivent se charger qu'après consentement. Axeptio gère ça nativement avec ses "vendors"</li>
-<li>Créer la page /politique-cookies avec le widget Axeptio intégré</li>
-<li>Ajouter le lien en footer : "Politique de cookies" + "Gérer mes préférences"</li>
-</ul>
-
-<h3 class="st2">Sitemap &amp; Google Search Console</h3>
-<ul>
-<li>Webflow génère automatiquement un sitemap à <code>/sitemap.xml</code></li>
-<li><strong>Action :</strong> Aller sur Google Search Console → Ajouter la propriété re-set.club → vérifier via DNS ou balise HTML → Sitemaps → soumettre l'URL du sitemap</li>
-<li>Dans GSC, demander l'indexation manuelle de chaque nouvelle page créée via "Inspection d'URL" → "Demander l'indexation"</li>
-</ul>
-
-<h3 class="st2">Performance / Core Web Vitals</h3>
-<p>Score actuel estimé : <strong>80 mobile / 85 desktop</strong> — Correct mais améliorable.</p>
-<ul>
-<li><strong>Images :</strong> Dans Webflow, activer le format WebP (Project Settings → le faire si dispo). Sinon, convertir manuellement avant upload. Max 200Ko par image.</li>
-<li><strong>Alt text :</strong> Chaque image → clic → Settings → remplir le champ Alt. Descriptif + mot-clé si naturel. Ex : "Sauna finlandais 50m² chez Re-Set Paris 9e"</li>
-<li><strong>Polices :</strong> Limiter à 2 polices max, 3-4 graisses. Utiliser les Google Fonts intégrées Webflow plutôt que des custom fonts.</li>
-<li><strong>Lazy loading :</strong> Webflow l'active par défaut sur les images en-dessous du fold. Vérifier que les images hero sont en "Eager" (chargement immédiat).</li>
-</ul>
-
-<h3 class="st2">Redirections &amp; erreurs</h3>
-<ul>
-<li>Si des pages sont renommées/supprimées → 301 redirect dans Project Settings → 301 Redirects</li>
-<li>Créer une page 404 personnalisée avec liens vers Home, /tarifs, /reservation</li>
-</ul>
-</div>
-
-<!-- ========== PAGE EN ========== -->
-<div class="sec" id="anglais">
-<h2 class="st">🇬🇧 Page /homepage-en — Recommandations</h2>
-
-<p>La page anglaise existe mais manque d'éléments SEO. Voici ce qu'il faut ajouter :</p>
-
-<h3 class="st2">Page Settings SEO</h3>
-<ul>
-<li><strong>Title :</strong> Sauna & Cold Plunge in Paris 9th | Re-Set Club</li>
-<li><strong>Meta Description :</strong> "Experience contrast therapy in the heart of Paris. 50m² Finnish sauna, 7 cold plunge baths (3°C-10°C). Guided sessions. Book now at Re-Set."</li>
-<li><strong>OG Image :</strong> Même image que la home FR (1200×630px)</li>
-</ul>
-
-<h3 class="st2">Contenu à ajouter sur la page</h3>
-<ul>
-<li><strong>H1 :</strong> "Sauna & Cold Plunge in Paris 9th — Guided Contrast Therapy Sessions"</li>
-<li><strong>Section "The Experience" :</strong> Reprendre les 3 sessions (Re-Boost, Re-Lax, Free-Flow) traduites en anglais avec descriptions</li>
-<li><strong>Section "The Space" :</strong> Chiffres clés (50m² sauna, 7 cold baths, 3°C-10°C). 2-3 photos.</li>
-<li><strong>Section "How It Works" :</strong> Déroulé en 4 étapes (Arrive → Change → Session → Relax)</li>
-<li><strong>Section "FAQ" :</strong> 4-5 questions en anglais (What to bring, Temperature, Duration, First time tips)</li>
-<li><strong>Section "Location & Hours" :</strong> Adresse, carte, horaires, métro le plus proche</li>
-<li><strong>CTA :</strong> "Book a Session" vers /reservation</li>
-</ul>
-
-<h3 class="st2">Hreflang (à ajouter dans Custom Code)</h3>
-<p>Dans le Custom Code "Inside &lt;head&gt;" de la page Home FR :</p>
-<blockquote><code>&lt;link rel="alternate" hreflang="fr" href="https://www.re-set.club/" /&gt;</code><br>
-<code>&lt;link rel="alternate" hreflang="en" href="https://www.re-set.club/homepage-en" /&gt;</code></blockquote>
-<p>Dans le Custom Code de /homepage-en, ajouter les mêmes deux lignes (les deux pages doivent se référencer mutuellement).</p>
-</div>
-
-<!-- ========== ROADMAP ========== -->
-<div class="sec" id="roadmap">
-<h2 class="st">🗓️ Roadmap Mois 1 &amp; 2</h2>
-
-<h3 class="st2">🔴 MOIS 1 — Fondations</h3>
-<div class="timeline">
-<div class="tl-week">
-<div class="tl-label">Semaine 1</div>
-<div class="tl-task">
-<p><span class="tag red">Critique</span></p>
-<p><strong>Corriger le H1 de la Home :</strong> Dans Webflow, sélectionner le titre principal → Settings → Tag → H1. Contenu : "Sauna & Bain Froid à Paris 9e — Sessions de Thérapie de Contraste Guidées". S'assurer qu'il n'y a qu'un seul H1.</p>
-</div>
-<div class="tl-task">
-<p><span class="tag red">Critique</span></p>
-<p><strong>Corriger la hiérarchie Hn sur toutes les pages :</strong> Passer en revue chaque heading sur Home, /tarifs, /reservation. Corriger les tags (H2 pour sections, H3 pour sous-sections). Ne jamais sauter de niveau.</p>
-</div>
-<div class="tl-task">
-<p><span class="tag red">Critique</span></p>
-<p><strong>Remplir les Page Settings SEO :</strong> Sur chaque page existante, remplir Title, Meta Description, OG Title, OG Description, OG Image dans l'onglet Page Settings de Webflow.</p>
-</div>
-<div class="tl-task">
-<p><span class="tag red">Critique</span></p>
-<p><strong>Installer Axeptio :</strong> Créer compte → configurer GA4 + Meta Pixel comme vendors → coller le script dans Project Settings → Footer Code. Créer /politique-cookies.</p>
-</div>
+    <div class="subsection">
+        <h3>Tableau récapitulatif — Architecture complète</h3>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>URL</th><th>Type</th><th>Statut</th><th>Objectif SEO</th><th>Maillage vers</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>/</code></td><td>Homepage</td><td><span class="tag tag-blue">Existante</span></td><td>Marque + notoriété</td><td>Toutes les pages</td></tr>
+                    <tr><td><code>/tarifs</code></td><td>Tarifs FR</td><td><span class="tag tag-blue">Existante</span></td><td>Conversion</td><td>/reservation</td></tr>
+                    <tr><td><code>/reservation</code></td><td>Réservation FR</td><td><span class="tag tag-blue">Existante</span></td><td>Conversion</td><td>Toutes les pages FR</td></tr>
+                    <tr><td><code>/homepage-en</code></td><td>Homepage EN</td><td><span class="tag tag-blue">Existante</span></td><td>Trafic EN</td><td>/booking</td></tr>
+                    <tr><td><code>/bain-froid-paris</code></td><td>Service FR</td><td><span class="tag tag-green">À créer</span></td><td>bain froid paris, ice bath paris</td><td>/, /tarifs, /bain-froid-guide</td></tr>
+                    <tr><td><code>/sauna-paris</code></td><td>Service FR</td><td><span class="tag tag-green">À créer</span></td><td>sauna club paris, sauna paris</td><td>/, /tarifs, /sauna-bienfaits</td></tr>
+                    <tr><td><code>/contrast-therapy-paris</code></td><td>Service FR/EN</td><td><span class="tag tag-green">À créer</span></td><td>contrast therapy paris</td><td>/, /bain-froid-paris, /sauna-paris</td></tr>
+                    <tr><td><code>/bain-froid-guide</code></td><td>Contenu statique</td><td><span class="tag tag-green">À créer</span></td><td>bain froid (1 900), bain glacé (720)</td><td>/bain-froid-paris, /reservation</td></tr>
+                    <tr><td><code>/bain-froid-bienfaits</code></td><td>Contenu statique</td><td><span class="tag tag-green">À créer</span></td><td>bain froid bienfaits (480)</td><td>/bain-froid-paris, /bain-froid-guide</td></tr>
+                    <tr><td><code>/sauna-bienfaits</code></td><td>Contenu statique</td><td><span class="tag tag-green">À créer</span></td><td>sauna bienfaits (880)</td><td>/sauna-paris, /reservation</td></tr>
+                    <tr><td><code>/recuperation-sport</code></td><td>Contenu statique</td><td><span class="tag tag-green">À créer</span></td><td>récupération après sport (140+)</td><td>/bain-froid-paris, /sauna-paris</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 
-<div class="tl-week">
-<div class="tl-label">Semaine 2</div>
-<div class="tl-task">
-<p><span class="tag red">Critique</span></p>
-<p><strong>Schema LocalBusiness :</strong> Coller le JSON-LD dans Custom Code (head) de la Home.</p>
-</div>
-<div class="tl-task">
-<p><span class="tag red">Critique</span></p>
-<p><strong>Schema Organization :</strong> Coller dans Project Settings → Custom Code → Head (site-wide).</p>
-</div>
-<div class="tl-task">
-<p><span class="tag red">Critique</span></p>
-<p><strong>Google Search Console :</strong> Vérifier la propriété re-set.club → soumettre le sitemap.xml → demander l'indexation des pages existantes.</p>
-</div>
-<div class="tl-task">
-<p><span class="tag orange">Fort</span></p>
-<p><strong>Optimiser les images :</strong> Vérifier format WebP, poids &lt;200Ko, remplir tous les alt text. Vérifier lazy loading.</p>
-</div>
+<hr class="divider">
+
+<!-- ============================================ -->
+<!-- SECTION 6 : PLAN D'ACTION -->
+<!-- ============================================ -->
+<div class="section" id="plan">
+    <p class="section-label">Section 06</p>
+    <h2>Plan d'action — Checklist</h2>
+    <p class="section-intro">Tâches priorisées par impact × facilité. Cochez chaque tâche au fur et à mesure. Aucune unité temporelle — avancez à votre rythme.</p>
+
+    <!-- BLOC TECHNIQUE -->
+    <div class="subsection">
+        <h3>🔧 Technique</h3>
+
+        <div class="task-card">
+            <div class="task-header">
+                <label class="task-check-label">
+                    <input type="checkbox" class="task-check">
+                    <span class="task-id">T-01</span>
+                    <span class="task-title">Intégrer Axeptio (bandeau de consentement RGPD)</span>
+                </label>
+                <span class="tag tag-red">Priorité haute</span>
+            </div>
+            <div class="task-body">
+                <p><strong>Constat :</strong> Aucun bandeau de consentement cookies détecté. GA4 se déclenche avant consentement — non conforme RGPD.</p>
+                <p><strong>Action :</strong></p>
+                <ul>
+                    <li>Créer un compte Axeptio sur axept.io et récupérer votre <code>clientId</code></li>
+                    <li>Dans Webflow → Project Settings → Custom Code → Head : coller le script Axeptio</li>
+                    <li>Dans GTM : conditionner le tag GA4 au consentement Axeptio (trigger "Axeptio consent granted")</li>
+                    <li>Vérifier dans Chrome DevTools (onglet Network) que GA4 ne se déclenche pas avant clic "Accepter"</li>
+                </ul>
+                <div class="code-block">
+&lt;script&gt;
+window.axeptioSettings = {
+  clientId: "VOTRE_CLIENT_ID",
+  cookiesVersion: "re-set.club-fr",
+};
+(function(d, s) {
+  var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+  e.async = true;
+  e.src = "//static.axept.io/sdk.js";
+  t.parentNode.insertBefore(e, t);
+})(document, "script");
+&lt;/script&gt;
+                </div>
+                <p><strong>Impact :</strong> Conformité RGPD. Évite les risques légaux (CNIL). Rassure les utilisateurs.</p>
+            </div>
+        </div>
+
+        <div class="task-card">
+            <div class="task-header">
+                <label class="task-check-label">
+                    <input type="checkbox" class="task-check">
+                    <span class="task-id">T-02</span>
+                    <span class="task-title">Mettre en place les redirections 301 sur les variantes de domaine</span>
+                </label>
+                <span class="tag tag-red">Priorité haute</span>
+            </div>
+            <div class="task-body">
+                <p><strong>Constat :</strong> 3 variantes crawlées par Google sans redirection : <code>http://www.re-set.club/</code>, <code>http://re-set.club/</code>, <code>https://re-set.club/</code>. Les backlinks pointant vers ces URLs ne transfèrent pas leur autorité.</p>
+                <p><strong>Action :</strong> Dans Webflow → Hosting → Redirects, ajouter :</p>
+                <ul>
+                    <li><code>http://re-set.club/*</code> → <code>https://www.re-set.club/$1</code> (301)</li>
+                    <li><code>http://www.re-set.club/*</code> → <code>https://www.re-set.club/$1</code> (301)</li>
+                    <li><code>https://re-set.club/*</code> → <code>https://www.re-set.club/$1</code> (301)</li>
+                    <li>Vérifier avec <code>curl -I http://re-set.club</code> que la réponse est bien 301</li>
+                </ul>
+                <p><strong>Impact :</strong> Consolidation du PageRank. L'autorité dispersée sur 3 variantes rejoint le domaine canonique.</p>
+            </div>
+        </div>
+
+        <div class="task-card">
+            <div class="task-header">
+                <label class="task-check-label">
+                    <input type="checkbox" class="task-check">
+                    <span class="task-id">T-03</span>
+                    <span class="task-title">Mettre en place les balises hreflang FR / EN</span>
+                </label>
+                <span class="tag tag-red">Priorité haute</span>
+            </div>
+            <div class="task-body">
+                <p><strong>Constat :</strong> Aucune balise hreflang détectée. Google ne sait pas que / et /homepage-en sont des équivalents linguistiques. La page EN capte des impressions FR et vice-versa.</p>
+                <p><strong>Action :</strong> Dans le Custom Code head de chaque page :</p>
+                <div class="code-block">
+&lt;!-- Sur / (homepage FR) --&gt;
+&lt;link rel="alternate" hreflang="fr" href="https://www.re-set.club/" /&gt;
+&lt;link rel="alternate" hreflang="en" href="https://www.re-set.club/homepage-en" /&gt;
+&lt;link rel="alternate" hreflang="x-default" href="https://www.re-set.club/" /&gt;
+
+&lt;!-- Sur /homepage-en --&gt;
+&lt;link rel="alternate" hreflang="fr" href="https://www.re-set.club/" /&gt;
+&lt;link rel="alternate" hreflang="en" href="https://www.re-set.club/homepage-en" /&gt;
+&lt;link rel="alternate" hreflang="x-default" href="https://www.re-set.club/" /&gt;
+
+&lt;!-- Même logique pour /tarifs ↔ /pricing et /reservation ↔ /booking --&gt;
+                </div>
+                <p><strong>Impact :</strong> Google sert la bonne version linguistique. Le CTR EN devrait augmenter (actuellement 4,5 % sur /homepage-en).</p>
+            </div>
+        </div>
+
+        <div class="task-card">
+            <div class="task-header">
+                <label class="task-check-label">
+                    <input type="checkbox" class="task-check">
+                    <span class="task-id">T-04</span>
+                    <span class="task-title">Nettoyer le sitemap.xml</span>
+                </label>
+                <span class="tag tag-orange">Priorité moyenne</span>
+            </div>
+            <div class="task-body">
+                <p><strong>Constat :</strong> Le sitemap contient /old-home (obsolète) et ne contient pas de balises <code>&lt;lastmod&gt;</code>.</p>
+                <p><strong>Action :</strong></p>
+                <ul>
+                    <li>Dans Webflow → Pages : désactiver l'indexation de /old-home (toggle "Exclude from sitemap")</li>
+                    <li>Vérifier que les nouvelles pages créées sont bien incluses dans le sitemap automatiquement</li>
+                    <li>Dans GSC → Sitemaps : soumettre le sitemap mis à jour</li>
+                </ul>
+                <p><strong>Impact :</strong> Meilleure efficacité de crawl. Les nouvelles pages seront indexées plus rapidement.</p>
+            </div>
+        </div>
+
+        <div class="task-card">
+            <div class="task-header">
+                <label class="task-check-label">
+                    <input type="checkbox" class="task-check">
+                    <span class="task-id">T-05</span>
+                    <span class="task-title">Ajouter le schema.org LocalBusiness + HealthAndBeautyBusiness</span>
+                </label>
+                <span class="tag tag-orange">Priorité moyenne</span>
+            </div>
+            <div class="task-body">
+                <p><strong>Constat :</strong> Aucun balisage structuré détecté. GBP fort (48 avis, 5 étoiles) mais le site ne renforce pas le signal local.</p>
+                <p><strong>Action :</strong> Dans Webflow → Pages → Homepage → Custom Code (Before &lt;/body&gt;) :</p>
+                <div class="code-block">
+&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "HealthAndBeautyBusiness",
+  "name": "Re-Set Club",
+  "image": "https://www.re-set.club/VOTRE-IMAGE.jpg",
+  "url": "https://www.re-set.club",
+  "telephone": "+33XXXXXXXXX",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ADRESSE DU CLUB",
+    "addressLocality": "Paris",
+    "postalCode": "750XX",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.XXXXX,
+    "longitude": 2.XXXXX
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "HH:MM",
+    "closes": "HH:MM"
+  }],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "48"
+  },
+  "priceRange": "€€"
+}
+&lt;/script&gt;
+                </div>
+                <p><strong>Impact :</strong> Rich results dans les SERPs locaux. Renforce le signal GBP. Améliore la visibilité sur les requêtes "sauna paris", "bain froid paris".</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOC ON-PAGE -->
+    <div class="subsection">
+        <h3>✏️ On-page — Pages existantes</h3>
+
+        <div class="task-card">
+            <div class="task-header">
+                <label class="task-check-label">
+                    <input type="checkbox" class="task-check">
+                    <span class="task-id">T-06</span>
+                    <span class="task-title">Optimiser le title et la meta description de la homepage FR</span>
+                </label>
+                <span class="tag tag-red">Priorité haute</span>
+            </div>
+            <div class="task-body">
+                <p><strong>Constat :</strong> Title actuel : "Re-Set Club" (11 car.) — trop court, n'exploite pas les 60 caractères disponibles. Aucune meta description indexée.</p>
+                <p><strong>Action :</strong></p>
+                <ul>
+                    <li><strong>Title :</strong> <code>Re-Set Club Paris — Sauna, Bain Froid &amp; Contrast Therapy</code> (58 car.)</li>
+                    <li><strong>Meta :</strong> <code>Vivez l'expérience Re-Set : sauna, bain froid et contrast therapy au cœur de Paris. Réservez votre séance en ligne.</code> (130 car.)</li>
+                </ul>
+                <p><strong>Impact :</strong> Meilleur CTR sur les requêtes marque + requêtes locales. Signal de pertinence pour Google.</p>
+            </div>
+        </div>
+
+        <div class="task-card">
+            <div class="task-header">
+                <label class="task-check-label">
+                    <input type="checkbox" class="task-check">
+                    <span class="task-id">T-07</span>
+                    <span class="task-title">Optimiser le title et la meta description de /homepage-en</span>
+                </label>
+                <span class="tag tag-red">Priorité haute</span>
+            </div>
+            <div class="task-body">
+                <p><strong>Constat :</strong> La page EN a un CTR de 4,5 % (vs 6,2 % FR). Les meta ne correspondent pas à l'intention de recherche EN.</p>
+                <p><strong>Action :</strong></p>
+                <ul>
+                    <li><strong>Title :</strong> <code>Re-Set Club Paris — Sauna, Cold Plunge &amp; Contrast Therapy</code> (58 car.)</li>
+                    <li><strong>Meta :</strong> <code>Experience Re-Set Club: sauna, ice bath and contrast therapy in central Paris. Book your session online.</code> (109 car.)</li>
+                </ul>
+                <p><strong>Impact :</strong> Alignement titre/intent EN. CTR attendu +1–2 points.</p>
+            </div>
+        </div>
+
+        <div class="task-card">
+            <div class="task-header">
+                <label class="task-check-label">
+                    <input type="checkbox" class="task-check">
+                    <span class="task-id">T-08</span>
+                    <span class="task-title">Optimiser le title et la meta description de /tarifs</span>
+                </label>
+                <span class="tag tag-orange">Priorité moyenne</span>
+            </div>
+            <div class="task-body">
+                <p><strong>Constat :</strong> Page /tarifs non optimisée. Aucune meta description. Potentiel de conversion directe depuis les SERPs.</p>
+                <p><strong>Action :</strong></p>
+                <ul>
+                    <li><strong>Title :</strong> <code>Tarifs — Re-Set Club Paris | Sauna &amp; Bain Froid</code> (50 car.)</li>
+                    <li><strong>Meta :</strong> <code>Découvrez les tarifs Re-Set Club : séances sauna, bain froid et contrast therapy à Paris. Réservation en ligne disponible.</code> (133 car.)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="task-card">
+            <div class="task-header">
+                <label class="task-check-label">
+                    <input type="checkbox" class="task-check">
+                    <span class="task-id">T-09</span>
+                    <span class="task-title">Structurer le maillage interne sur les pages existantes</span>
+                </label>
+                <span class="tag tag-orange">Priorité moyenne</span>
+            </div>
+            <div class="task-body">
+                <p><strong>Constat :</strong> La homepage ne pointe vers aucune page de service dédiée (elles n'existent pas encore). Une fois les pages créées, le maillage doit être rétroactivement ajouté.</p>
+                <p><strong>Action (à faire après création des nouvelles pages) :</strong></p>
+                <ul>
+                    <li>Ajouter sur la homepage : liens textuels vers /bain-froid-paris, /sauna-paris, /contrast-therapy-paris</li>
+                    <li>Sur /tarifs : liens vers les 3 pages de service (contextualiser les prix)</li>
+                    <li>Sur /reservation : liens vers les 3 pages de service (aider l'utilisateur à choisir)</li>
+                    <li>Chaque nouvelle page doit pointer vers /reservation avec un CTA ancré (ex : "Réserver ma séance")</li>
+                </ul>
+                <p><strong>Impact :</strong> Distribution du PageRank vers les pages prioritaires. Aide Google à comprendre la hiérarchie du site.</p>
+            </div>
+        </div>
+
+        <div class="task-card">
+            <div class="task-header">
+                <label class="task-check-label">
+                    <input type="checkbox" class="task-check">
+                    <span class="task-id">T-10</span>
+                    <span class="task-title">Alt text + compression des images</span>
+                </label>
+                <span class="tag tag-blue">Standard</span>
+            </div>
+            <div class="task-body">
+                <p><strong>Constat :</strong> Plusieurs images sans alt text détectées. LCP homepage ~2,1 s — images non compressées contributeurs probables.</p>
+                <p><strong>Action :</strong></p>
+                <ul>
+                    <li>Dans Webflow → Assets : renommer chaque image avec un nom descriptif (<code>sauna-reset-club-paris.jpg</code>)</li>
+                    <li>Pour chaque image dans le designer : renseigner le champ Alt Text (descriptif + mot-clé naturel)</li>
+                    <li>Passer toutes les images hero en WebP via un outil de compression (Squoosh, TinyPNG)</li>
+                    <li>Activer le lazy loading natif sur les images below the fold</li>
+                </ul>
+                <p><strong>Impact :</strong> Accessibilité + signal SEO images + amélioration LCP (Core Web Vitals).</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOC PAGES DE SERVICE -->
+    <div class="subsection">
+        <h3>📄 Création des pages de service</h3>
+
+        <div class="task-card">
+            <div class="task-header">
+                <label class="task-check-label">
+                    <input type="checkbox" class="task-check">
+                    <span class="task-id">T-11</span>
+                    <span class="task-title">Créer la page /bain-froid-paris</span>
+                </label>
+                <span class="tag tag-red">Priorité haute</span>
+            </div>
+            <div class="task-body">
+                <p><strong>Données :</strong> bain froid paris (140, KD 10), bain glacé paris (90, KD 12), ice bath paris (170, KD 31), cold plunge paris (70, KD 22).</p>
+                <p><strong>Structure recommandée :</strong></p>
+                <ul>
+                    <li><strong>Title :</strong> <code>Bain Froid à Paris — Ice Bath &amp; Cold Plunge | Re-Set Club</code></li>
+                    <li><strong>Meta :</strong> <code>Découvrez le bain froid chez Re-Set Club à Paris. Protocole ice bath, eau à 10°C, suivi personnalisé. Réservez votre séance.</code></li>
+                    <li><strong>H1 :</strong> Bain Froid à Paris — Re-Set Club</li>
+                    <li><strong>H2 :</strong> Notre protocole bain froid → Bienfaits (liste pour PAA) → Ce qui nous différencie → Tarifs → FAQ → CTA</li>
+                    <li><strong>Schema :</strong> Service + FAQPage</li>
+                    <li><strong>Maillage :</strong> → /bain-froid-guide, → /contrast-therapy-paris, → /reservation</li>
+                </ul>
+                <p><strong>Impact attendu :</strong> KD 10 = top 5 accessible en 30–45 jours. Potentiel : 80–140 clics/mois sur "bain froid paris" seul.</p>
+            </div>
+        </div>
+
+        <div class="task-card">
+            <div class="task-header">
+                <label class="task-check-label">
+                    <input type="checkbox" class="task-check">
+                    <span class="task-id">T-12</span>
+                    <span class="task-title">Créer la page /sauna-paris</span>
+                </label>
+                <span class="tag tag-red">Priorité haute</span>
+            </div>
+            <div class="task-body">
+                <p><strong>Données :</strong> sauna club paris (260, KD 34), club sauna paris (320, KD 25), sauna japonais paris (170, KD 22).</p>
+                <p><strong>Structure recommandée :</strong></p>
+                <ul>
+                    <li><strong>Title :</strong> <code>Sauna à Paris — Club Sauna Premium | Re-Set Club</code></li>
+                    <li><strong>Meta :</strong> <code>Vivez l'expérience sauna Re-Set Club à Paris. Sauna traditionnel, ambiance unique, communauté. Réservez votre séance de sauna.</code></li>
+                    <li><strong>H1 :</strong> Sauna à Paris — Re-Set Club</li>
+                    <li><strong>H2 :</strong> Le sauna chez Re-Set → Le concept social club → Bienfaits du sauna → Sauna + bain froid → FAQ → CTA</li>
+                    <li><strong>Schema :</strong> Service + FAQPage</li>
+                    <li><strong>Maillage :</strong> → /bain-froid-paris, → /sauna-bienfaits, → /reservation</li>
+                </ul>
+                <p><strong>Impact attendu :</strong> "club sauna paris" KD 25 — top 20 en 60 jours.</p>
+            </div>
+        </div>
+
+        <div class="task-card">
+            <div class="task-header">
+                <label class="task-check-label">
+                    <input type="checkbox" class="task-check">
+                    <span class="task-id">T-13</span>
+                    <span class="task-title">Créer la page /contrast-therapy-paris</span>
+                </label>
+                <span class="tag tag-orange">Priorité moyenne</span>
+            </div>
+            <div class="task-body">
+                <p><strong>Données :</strong> contrast therapy paris (184, KD 19), cryothérapie paris (590, KD 24), thermothérapie paris (70, KD 8). Re-Set déjà #5 GSC sans page dédiée.</p>
+                <p><strong>Structure recommandée :</strong></p>
+                <ul>
+                    <li><strong>Title :</strong> <code>Contrast Therapy Paris — Sauna &amp; Bain Froid | Re-Set Club</code></li>
+                    <li><strong>Meta :</strong> <code>La contrast therapy à Paris : alternance sauna et bain froid chez Re-Set Club. Protocole guidé, bienfaits prouvés. Réservez.</code></li>
+                    <li><strong>H1 :</strong> Contrast Therapy à Paris — Re-Set Club</li>
+                    <li><strong>Définition Featured Snippet (40–50 mots après H1) :</strong> "La contrast therapy, ou thérapie par contraste, consiste à alterner immersions en eau froide (10°C) et exposition à la chaleur du sauna. Cette alternance stimule la circulation sanguine, accélère la récupération musculaire et réduit l'inflammation."</li>
+                    <li><strong>H2 :</strong> Notre protocole → Bienfaits → Contrast therapy et récupération sportive → FAQ → CTA</li>
+                    <li><strong>Maillage :</strong> → /bain-froid-paris, → /sauna-paris, → /reservation</li>
+                </ul>
+                <p><strong>Impact attendu :</strong> Re-Set est seul en lice sur cette requête. Une page dédiée = verrouillage top 3 quasi immédiat.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOC CONTENU -->
+    <div class="subsection">
+        <h3>📝 Création du contenu informationnel (pages statiques Webflow)</h3>
+
+        <div class="note">
+            <strong>Note :</strong> Toutes ces pages seront créées comme pages statiques Webflow, sans CMS Collections. Chaque page doit faire 1 200–1 800 mots minimum. Inclure un sommaire cliquable (ancres HTML) et au moins une liste structurée pour cibler les PAA et Featured Snippets.
+        </div>
+
+        <div class="task-card">
+            <div class="task-header">
+                <label class="task-check-label">
+                    <input type="checkbox" class="task-check">
+                    <span class="task-id">T-14</span>
+                    <span class="task-title">Créer /bain-froid-guide — "Le bain froid : guide complet"</span>
+                </label>
+                <span class="tag tag-red">Priorité haute</span>
+            </div>
+            <div class="task-body">
+                <p><strong>Données :</strong> bain froid (1 900, KD 13), bain glacé (720, KD 11), bain de glace (390, KD 17), bain eau froide (210, KD 15).</p>
+                <p><strong>Structure H2 :</strong></p>
+                <ul>
+                    <li>Qu'est-ce qu'un bain froid ? (définition 40–50 mots → Featured Snippet)</li>
+                    <li>Quelle température pour un bain froid ?</li>
+                    <li>Combien de temps rester dans un bain froid ?</li>
+                    <li>Bain froid vs douche froide : quelle différence ?</li>
+                    <li>Bain de glace : est-ce dangereux ?</li>
+                    <li>Comment se préparer à son premier bain froid</li>
+                    <li>Où faire un bain froid à Paris (→ /bain-froid-paris)</li>
+                </ul>
+                <p><strong>Impact attendu :</strong> KD 13 = top 5 accessible en 30–60 jours. Volume potentiel : 300–700 clics/mois.</p>
+            </div>
+        </div>
+
+        <div class="task-card">
+            <div class="task-header">
+                <label class="task-check-label">
+                    <input type="checkbox" class="task-check">
+                    <span class="task-id">T-15</span>
+                    <span class="task-title">Créer /bain-froid-bienfaits — "Bain froid : bienfaits et effets sur le corps"</span>
+                </label>
+                <span class="tag tag-red">Priorité haute</span>
+            </div>
+            <div class="task-body">
+                <p><strong>Données :</strong> bain froid bienfaits (480, KD 19), bain froid combien de temps (320, KD 12), bain froid tous les jours (110, KD 14), bain froid combien de fois par semaine (90, KD 10).</p>
+                <p><strong>Structure H2 :</strong></p>
+                <ul>
+                    <li>Les 7 bienfaits prouvés du bain froid</li>
+                    <li>Combien de temps rester dans un bain froid ?</li>
+                    <li>Bain froid tous les jours : est-ce conseillé ?</li>
+                    <li>Combien de fois par semaine faire un bain froid ?</li>
+                    <li>Bain froid le matin ou le soir ?</li>
+                    <li>Les résultats sur la durée (1 semaine, 1 mois, 3 mois)</li>
+                </ul>
+                <p><strong>Impact attendu :</strong> 3 requêtes sur ce cluster ont un Featured Snippet disponible. Structure en listes numérotées = fort potentiel position 0.</p>
+            </div>
+        </div>
+
+        <div class="task-card">
+            <div class="task-header">
+                <label class="task-check-label">
+                    <input type="checkbox" class="task-check">
+                    <span class="task-id">T-16</span>
+                    <span class="task-title">Créer /sauna-bienfaits — "Sauna : bienfaits, types et conseils"</span>
+                </label>
+                <span class="tag tag-orange">Priorité moyenne</span>
+            </div>
+            <div class="task-body">
+                <p><strong>Données :</strong> sauna bienfaits (880, KD 21), sauna infrarouge bienfaits (210, KD 16), sauna japonais bienfaits (140, KD 14).</p>
+                <p><strong>Structure H2 :</strong></p>
+                <ul>
+                    <li>Les bienfaits du sauna prouvés par la science</li>
+                    <li>Sauna traditionnel vs infrarouge vs japonais</li>
+                    <li>Combien de temps rester au sauna ?</li>
+                    <li>Sauna et récupération sportive</li>
+                    <li>Sauna et bain froid : pourquoi les combiner ?</li>
+                    <li>Sauna à Paris : découvrez Re-Set Club (→ /sauna-paris)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="task-card">
+            <div class="task-header">
+                <label class="task-check-label">
+                    <input type="checkbox" class="task-check">
+                    <span class="task-id">T-17</span>
+                    <span class="task-title">Créer /recuperation-sport — "Récupération après le sport : les meilleures méthodes"</span>
+                </label>
+                <span class="tag tag-orange">Priorité moyenne</span>
+            </div>
+            <div class="task-body">
+                <p><strong>Données :</strong> récupération musculaire jambes (260, KD 18), récupération jambes (170, KD 15), recuperation apres sport (140, KD 21), bain froid récupération (110, KD 11).</p>
+                <p><strong>Structure H2 :</strong></p>
+                <ul>
+                    <li>Pourquoi la récupération est essentielle</li>
+                    <li>Récupération musculaire des jambes : méthodes efficaces</li>
+                    <li>Bain froid et récupération : ce que dit la science</li>
+                    <li>Sauna et récupération musculaire</li>
+                    <li>Contrast therapy : la méthode des sportifs pros</li>
+                    <li>À Paris : récupérez chez Re-Set Club (→ /contrast-therapy-paris)</li>
+                </ul>
+                <p><strong>Impact attendu :</strong> Cluster transversal sport/bien-être. Fort potentiel d'acquisition d'une audience sportive parisienne non encore captée.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOC BACKLINKS -->
+    <div class="subsection">
+        <h3>🔗 Netlinking — Développement de l'autorité</h3>
+
+        <div class="task-card">
+            <div class="task-header">
+                <label class="task-check-label">
+                    <input type="checkbox" class="task-check">
+                    <span class="task-id">T-18</span>
+                    <span class="task-title">Désavouer les backlinks spam</span>
+                </label>
+                <span class="tag tag-blue">Standard</span>
+            </div>
+            <div class="task-body">
+                <p><strong>Constat :</strong> Sur 130 backlinks, la majorité provient de domaines spam (aged domains, goooogla.com, hebagh.cv…). Risque faible sur un jeune site mais à nettoyer.</p>
+                <p><strong>Action :</strong></p>
+                <ul>
+                    <li>Dans SEMrush → Backlinks → exporter la liste complète</li>
+                    <li>Filtrer les domaines avec AS &lt; 5 et ancre générique/irrelevante</li>
+                    <li>Créer un fichier disavow.txt avec les domaines à ignorer</li>
+                    <li>Soumettre dans GSC → Disavow Links Tool</li>
+                    <li>Conserver : parisjetaime.com, gqmagazine.fr, inspire-paris.com</li>
+                </ul>
+                <p><strong>Impact :</strong> Signal de qualité de profil envoyé à Google. Potentiel +1–2 points d'AS sur 3 mois.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- RÉCAP CHECKLIST -->
+    <div class="subsection">
+        <h3>📋 Récapitulatif — Toutes les tâches</h3>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>ID</th><th>Tâche</th><th>Thème</th><th>Priorité</th><th>Dépendances</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>T-01</td><td>Intégration Axeptio</td><td>Technique</td><td><span class="tag tag-red">Haute</span></td><td>—</td></tr>
+                    <tr><td>T-02</td><td>Redirections 301 variantes domaine</td><td>Technique</td><td><span class="tag tag-red">Haute</span></td><td>—</td></tr>
+                    <tr><td>T-03</td><td>Balises hreflang FR/EN</td><td>Technique</td><td><span class="tag tag-red">Haute</span></td><td>—</td></tr>
+                    <tr><td>T-04</td><td>Nettoyer sitemap.xml</td><td>Technique</td><td><span class="tag tag-orange">Moyenne</span></td><td>—</td></tr>
+                    <tr><td>T-05</td><td>Schema.org LocalBusiness</td><td>Technique</td><td><span class="tag tag-orange">Moyenne</span></td><td>—</td></tr>
+                    <tr><td>T-06</td><td>Title/meta homepage FR</td><td>On-page</td><td><span class="tag tag-red">Haute</span></td><td>—</td></tr>
+                    <tr><td>T-07</td><td>Title/meta homepage EN</td><td>On-page</td><td><span class="tag tag-red">Haute</span></td><td>T-03</td></tr>
+                    <tr><td>T-08</td><td>Title/meta /tarifs</td><td>On-page</td><td><span class="tag tag-orange">Moyenne</span></td><td>—</td></tr>
+                    <tr><td>T-09</td><td>Maillage interne pages existantes</td><td>On-page</td><td><span class="tag tag-orange">Moyenne</span></td><td>T-11, T-12, T-13</td></tr>
+                    <tr><td>T-10</td><td>Alt text + compression images</td><td>On-page</td><td><span class="tag tag-blue">Standard</span></td><td>—</td></tr>
+                    <tr><td>T-11</td><td>Créer /bain-froid-paris</td><td>Pages service</td><td><span class="tag tag-red">Haute</span></td><td>T-06, T-09</td></tr>
+                    <tr><td>T-12</td><td>Créer /sauna-paris</td><td>Pages service</td><td><span class="tag tag-red">Haute</span></td><td>T-06, T-09</td></tr>
+                    <tr><td>T-13</td><td>Créer /contrast-therapy-paris</td><td>Pages service</td><td><span class="tag tag-orange">Moyenne</span></td><td>T-09</td></tr>
+                    <tr><td>T-14</td><td>Créer /bain-froid-guide</td><td>Contenu</td><td><span class="tag tag-red">Haute</span></td><td>T-11</td></tr>
+                    <tr><td>T-15</td><td>Créer /bain-froid-bienfaits</td><td>Contenu</td><td><span class="tag tag-red">Haute</span></td><td>T-11</td></tr>
+                    <tr><td>T-16</td><td>Créer /sauna-bienfaits</td><td>Contenu</td><td><span class="tag tag-orange">Moyenne</span></td><td>T-12</td></tr>
+                    <tr><td>T-17</td><td>Créer /recuperation-sport</td><td>Contenu</td><td><span class="tag tag-orange">Moyenne</span></td><td>T-11, T-13</td></tr>
+                    <tr><td>T-18</td><td>Désavouer backlinks spam</td><td>Backlinks</td><td><span class="tag tag-blue">Standard</span></td><td>—</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="callout callout-green">
+        <strong>✅ Résultat attendu :</strong> Le site passe de 5 à 15+ pages indexables. 3 pages de service captent les requêtes commerciales locales (bain froid paris, sauna paris, contrast therapy paris). 4+ pages de contenu statique captent les requêtes informationnelles (bain froid 1 900/mois, bienfaits 480/mois, sauna bienfaits 880/mois, récupération sport 500+/mois). Chaque page est maillée vers /reservation. <strong>Impact estimé : +80–120 % de trafic organique sous 45–90 jours après indexation des nouvelles pages.</strong>
+    </div>
 </div>
 
-<div class="tl-week">
-<div class="tl-label">Semaine 3</div>
-<div class="tl-task">
-<p><span class="tag red">Critique</span></p>
-<p><strong>Créer /sauna-paris :</strong> Nouvelle Static Page dans Webflow. Suivre le template 9 sections. Remplir Page Settings SEO. Ajouter Schema FAQPage. 800-1 200 mots.</p>
-</div>
-<div class="tl-task">
-<p><span class="tag red">Critique</span></p>
-<p><strong>Créer /bain-froid-paris :</strong> Dupliquer le layout de /sauna-paris → adapter tout le contenu. 800-1 200 mots.</p>
-</div>
-<div class="tl-task">
-<p><span class="tag orange">Fort</span></p>
-<p><strong>Setup blog CMS :</strong> Créer la Collection "Blog Posts" dans Webflow avec les champs listés dans la section Templates. Construire le template de page article.</p>
-</div>
-</div>
-
-<div class="tl-week">
-<div class="tl-label">Semaine 4</div>
-<div class="tl-task">
-<p><span class="tag orange">Fort</span></p>
-<p><strong>Créer /breathwork-paris :</strong> 600-800 mots. Template service simplifié.</p>
-</div>
-<div class="tl-task">
-<p><span class="tag orange">Fort</span></p>
-<p><strong>Enrichir /tarifs :</strong> Ajouter du contenu SEO (intro de 100 mots, comparatif des formules en texte, liens vers chaque page service).</p>
-</div>
-<div class="tl-task">
-<p><span class="tag orange">Fort</span></p>
-<p><strong>2 premiers articles blog :</strong> Publier /blog/bienfaits-sauna + /blog/bienfaits-bain-froid. 1 200-1 500 mots chacun. Liens internes vers /sauna-paris et /bain-froid-paris.</p>
-</div>
-<div class="tl-task">
-<p><span class="tag orange">Fort</span></p>
-<p><strong>Google Business Profile :</strong> Optimiser la fiche — catégories (Sauna, Centre de bien-être), horaires complets, photos du lieu, premier post GBP, commencer à demander des avis clients.</p>
-</div>
-</div>
-</div>
-
-<h3 class="st2">🟠 MOIS 2 — Accélération</h3>
-<div class="timeline">
-<div class="tl-week">
-<div class="tl-label">Semaine 5</div>
-<div class="tl-task">
-<p><span class="tag orange">Fort</span></p>
-<p><strong>Créer /therapie-contraste-paris :</strong> 800-1 000 mots. Principe scientifique, protocole Re-Set, pour qui.</p>
-</div>
-<div class="tl-task">
-<p><span class="tag orange">Fort</span></p>
-<p><strong>Créer /faq dédiée :</strong> Migrer les 9 questions existantes + ajouter 6-8 nouvelles. Schema FAQPage dans le Custom Code. Liens internes vers chaque page service.</p>
-</div>
-</div>
-
-<div class="tl-week">
-<div class="tl-label">Semaine 6</div>
-<div class="tl-task">
-<p><span class="tag yellow">Moyen</span></p>
-<p><strong>Créer /team-building-sauna-paris :</strong> 700-1 000 mots. Offre entreprise, capacité d'accueil, formule, formulaire de contact dédié.</p>
-</div>
-<div class="tl-task">
-<p><span class="tag orange">Fort</span></p>
-<p><strong>2 articles blog supplémentaires :</strong> Publier /blog/therapie-contraste-bienfaits + /blog/routine-sauna-bain-froid. 1 200-1 500 mots chacun.</p>
-</div>
-</div>
-
-<div class="tl-week">
-<div class="tl-label">Semaine 7</div>
-<div class="tl-task">
-<p><span class="tag orange">Fort</span></p>
-<p><strong>Maillage interne complet :</strong> Vérifier que chaque page service lie vers les autres services + /tarifs + /reservation + son article blog associé. Chaque article blog lie vers sa page service + /reservation.</p>
-</div>
-<div class="tl-task">
-<p><span class="tag orange">Fort</span></p>
-<p><strong>Compléter /homepage-en :</strong> Ajouter tout le contenu listé dans la section "Page EN" ci-dessus. Ajouter les balises hreflang croisées sur Home FR et /homepage-en.</p>
-</div>
-<div class="tl-task">
-<p><span class="tag yellow">Moyen</span></p>
-<p><strong>Page 404 personnalisée :</strong> Créer dans Webflow (Project Settings → 404 page). Design cohérent, liens vers Home, /tarifs, /reservation.</p>
-</div>
-</div>
-
-<div class="tl-week">
-<div class="tl-label">Semaine 8</div>
-<div class="tl-task">
-<p><span class="tag orange">Fort</span></p>
-<p><strong>Premier reporting :</strong> Export GSC (impressions, clics, positions moyennes par requête). Export GA4 (trafic organique vs autres canaux). Documenter l'état des lieux à M+2 comme point de référence.</p>
-</div>
-<div class="tl-task">
-<p><span class="tag yellow">Moyen</span></p>
-<p><strong>Ajustements :</strong> Identifier les pages qui gagnent des impressions mais pas de clics → réécrire les titles et meta descriptions. Identifier les requêtes émergentes dans GSC → ajuster ou créer du contenu.</p>
-</div>
-<div class="tl-task">
-<p><span class="tag yellow">Moyen</span></p>
-<p><strong>Collecte d'avis Google :</strong> Mettre en place un process systématique — QR code en sortie de session, email post-visite avec lien direct vers la page d'avis GBP. Objectif : 10-15 avis à fin M2.</p>
-</div>
-</div>
-</div>
-
-<h3 class="st2">📊 Résultats attendus à fin Mois 2</h3>
-<table>
-<tr><th>Indicateur</th><th>Aujourd'hui</th><th>Cible M+2</th></tr>
-<tr><td>Pages indexées</td><td>3-4</td><td>14-15</td></tr>
-<tr><td>Contenu total (mots)</td><td>~650</td><td>~12 000</td></tr>
-<tr><td>Trafic organique non-brandé</td><td>~0</td><td>200-400 visites/mois</td></tr>
-<tr><td>Requêtes positionnées top 20</td><td>~0</td><td>15-25</td></tr>
-<tr><td>Schema structurés</td><td>0</td><td>3 types (LocalBusiness, FAQPage, Organization)</td></tr>
-<tr><td>Conformité RGPD</td><td>❌</td><td>✅</td></tr>
-<tr><td>Fiche Google Business optimisée</td><td>Partielle</td><td>✅</td></tr>
-<tr><td>Avis Google</td><td>?</td><td>10-15 avis collectés</td></tr>
-</table>
-
-<blockquote>
-<strong>Note importante :</strong> Les résultats SEO sont progressifs. Les mois 1-2 posent les fondations indispensables. Le vrai impact se mesure à M+4/M+6. Les positions Google mettent 3-6 mois à se stabiliser après publication d'un contenu. Ce plan crée les conditions pour une croissance organique durable et mesurable.
-</blockquote>
-</div>
+<hr class="divider">
 
 <!-- FOOTER -->
-<div style="text-align:center;padding:48px 24px;color:#333;font-size:13px;">
-Plan SEO Re-Set.Club — Juin 2025<br>
-Document confidentiel
+<div class="footer">
+    <p>Audit SEO — RE-SET Club · Avril 2026</p>
+    <p style="margin-top:0.25rem; font-size:0.8rem;">Données sources : Google Search Console, GA4, SEMrush. Volumes de recherche : moyennes mensuelles France, mars 2026.</p>
 </div>
 
-</body>
-</html>
-</antArtifact>
+<style>
+    /* ── Checklist tasks ── */
+    .task-check-label {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        cursor: pointer;
+        flex: 1;
+    }
+
+    .task-check {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 18px;
+        height: 18px;
+        min-width: 18px;
+        border: 2px solid var(--border);
+        border-radius: 4px;
+        background: var(--surface-2);
+        cursor: pointer;
+        position: relative;
+        transition: all 0.2s;
+    }
+
+    .task-check:checked {
+        background: var(--accent-2);
+        border-color: var(--accent-2);
+    }
+
+    .task-check:checked::after {
+        content: "✓";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #0a0a0a;
+        font-size: 0.75rem;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    .task-check:checked ~ .task-title {
+        text-decoration: line-through;
+        color: var(--text-muted);
+    }
+
+    .task-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        transition: border-color 0.2s;
+    }
+
+    .task-card:has(.task-check:checked) {
+        opacity: 0.6;
+        border-color: var(--accent-2);
+    }
+
+    .task-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.75rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .task-id {
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: var(--text-muted);
+        background: var(--surface-2);
+        padding: 0.15rem 0.5rem;
+        border-radius: 4px;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+    }
+
+    .task-title {
+        font-size: 0.95rem;
+        font-weight: 600;
+        transition: all 0.2s;
+    }
+
+    .task-body {
+        font-size: 0.88rem;
+        color: var(--text-muted);
+        line-height: 1.7;
+    }
+
+    .task-body p { margin-bottom: 0.5rem; }
+    .task-body p:last-child { margin-bottom: 0; }
+
+    .task-body ul {
+        padding-left: 1.25rem;
+        margin: 0.5rem 0;
+    }
+
+    .task-body ul li { margin-bottom: 0.25rem; }
+
+    .task-body strong { color: var(--text); }
+
+    /* ── Archi cards ── */
+    .archi-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-left: 4px solid var(--accent);
+        border-radius: 12px;
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .archi-card h4 {
+        font-size: 0.95rem;
+        font-weight: 600;
+        margin-bottom: 0.35rem;
+    }
+
+    .archi-url {
+        font-family: 'Courier New', monospace;
+        font-size: 0.8rem;
+        color: var(--accent);
+        margin-bottom: 0.75rem;
+    }
+
+    .archi-detail {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        line-height: 1.75;
+    }
+
+    /* ── Bench cards ── */
+    .bench-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .bench-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1.25rem;
+    }
+
+    .bench-card.highlight {
+        border-color: var(--accent);
+    }
+
+    .bench-card h4 {
+        font-size: 0.95rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+    }
+
+    .bench-url {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        margin-bottom: 0.75rem;
+        font-family: monospace;
+    }
+
+    .bench-stat {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.82rem;
+        padding: 0.2rem 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .bench-stat:last-child { border-bottom: none; }
+    .stat-label { color: var(--text-muted); }
+    .stat-val { font-weight: 600; color: var(--text); }
+
+    /* ── Tags ── */
+    .tag {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 600;
+        padding: 0.2rem 0.6rem;
+        border-radius: 4px;
+        letter-spacing: 0.3px;
+        white-space: nowrap;
+    }
+
+    .tag-red    { background: rgba(239,83,80,.15);  color: var(--accent-red);    }
+    .tag-orange { background: rgba(255,183,77,.15); color: var(--accent-3);      }
+    .tag-blue   { background: rgba(79,195,247,.15); color: var(--accent);        }
+    .tag-green  { background: rgba(129,199,132,.15);color: var(--accent-2);      }
+    .tag-purple { background: rgba(179,157,219,.15);color: var(--accent-purple); }
+
+    /* ── Callouts ── */
+    .callout {
+        padding: 1rem 1.25rem;
+        border-radius: 8px;
+        font-size: 0.88rem;
+        line-height: 1.6;
+        margin-top: 1.5rem;
+    }
+
+    .callout-green { background: rgba(129,199,132,.08); border-left: 3px solid var(--accent-2); }
+    .callout-blue  { background: rgba(79,195,247,.08);  border-left: 3px solid var(--accent);   }
+
+    /* ── Note ── */
+    .note {
+        background: var(--surface-2);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 0.85rem 1rem;
+        font-size: 0.82rem;
+        color: var(--text-muted);
+        margin-top: 1rem;
+    }
+
+    /* ── Table ── */
+    .table-wrapper { overflow-x: auto; margin: 0.75rem 0; }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.85rem;
+    }
+
+    th {
+        text-align: left;
+        padding: 0.6rem 0.75rem;
+        background: var(--surface-2);
+        color: var(--text-muted);
+        font-weight: 600;
+        font-size: 0.78rem;
+        border-bottom: 1px solid var(--border);
+    }
+
+    td {
+        padding: 0.55rem 0.75rem;
+        border-bottom: 1px solid var(--border);
+        vertical-align: top;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    tr:hover td { background: var(--surface-2); }
+
+    code {
+        font-family: 'Courier New', monospace;
+        font-size: 0.82rem;
+        background: var(--surface-2);
+        padding: 0.1rem 0.35rem;
+        border-radius: 3px;
+        color: var(--accent);
+    }
+
+    .code-block {
+        background: #0d0d0d;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 1rem;
+        font-family: 'Courier New', monospace;
+        font-size: 0.78rem;
+        color: #a8d8a8;
+        white-space: pre;
+        overflow-x: auto;
+        margin: 0.75rem 0;
+        line-height: 1.5;
+    }
+
+    /* ── Divider ── */
+    .divider {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 3rem 0;
+    }
+
+    /* ── Footer ── */
+    .footer {
+        text-align: center;
+        padding: 2rem 0 1rem;
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        border-top: 1px solid var(--border);
+    }
+</style>
